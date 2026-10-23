@@ -1,0 +1,2312 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buku Pedoman Pegawai FIWA 2026</title>
+<meta name="description" content="Buku Pedoman Pegawai Fitrah Islamic World Academy (FIWA) 2026: hak, kewajiban, jam kerja, cuti, gaji, dan tata tertib pegawai.">
+<meta name="theme-color" content="#0f2f52">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:wght@400;700&display=swap">
+<style>
+/* Layout: navy masthead in the FIWA profile's colors, then a reading column with a sticky chapter index (sidebar on desktop, drawer on phone). */
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --fg: #16202c;
+  --muted: #586579;
+  --line: #dce2ea;
+  --navy: #0f2f52;
+  --navy-2: #173f6b;
+  --gold: #b48a35;
+  --gold-text: #87631c;
+  --accent: #1d5a96;
+  --accent-soft: #e6eef7;
+  --mark: #fbe9b7;
+  --tbd-bg: #fbf1dc;
+  --tbd-fg: #7b5512;
+  --th-bg: #eef2f7;
+  --mast-fg: #f3ede0;
+  --mast-muted: #b9c6d8;
+  --f-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --f-body: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-arab: "Amiri", "Traditional Arabic", "Scheherazade New", serif;
+  --fs: 1rem;
+  --bar-h: 56px;
+  --side-w: 300px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1520; --surface: #111f2e; --fg: #e5ebf2; --muted: #9eadc0; --line: #23364a;
+    --navy: #0a2340; --navy-2: #12345a; --gold: #d4ab5c; --gold-text: #dcb76d;
+    --accent: #8ab6e6; --accent-soft: #16304b; --mark: #5a4614; --tbd-bg: #3a2c0f; --tbd-fg: #f0cf88;
+    --th-bg: #172a3d; --mast-fg: #f3ede0; --mast-muted: #a9b8cc; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1520; --surface: #111f2e; --fg: #e5ebf2; --muted: #9eadc0; --line: #23364a;
+  --navy: #0a2340; --navy-2: #12345a; --gold: #d4ab5c; --gold-text: #dcb76d;
+  --accent: #8ab6e6; --accent-soft: #16304b; --mark: #5a4614; --tbd-bg: #3a2c0f; --tbd-fg: #f0cf88;
+  --th-bg: #172a3d; --mast-fg: #f3ede0; --mast-muted: #a9b8cc; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--bar-h) + env(safe-area-inset-top, 0px) + 16px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--f-body); font-size: var(--fs); line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--navy); }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* ---------- masthead ---------- */
+.mast { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--mast-fg); }
+.mast-in { max-width: 1180px; margin: 0 auto; padding-block: 40px 36px; display: grid; gap: 14px; }
+.bismillah { text-align: left; font-family: var(--f-arab); font-size: 1.6rem; color: var(--gold); margin: 0; line-height: 1.6; }
+.kicker { margin: 0; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.mast h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.05; text-wrap: balance; color: #fbf7ee; }
+.mast .lede { margin: 0; max-width: 60ch; color: var(--mast-muted); font-size: 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; padding: 0; list-style: none; }
+.meta li { font-size: .78rem; padding: 4px 10px; border: 1px solid rgba(212,171,92,.45); border-radius: 999px; color: var(--mast-fg); }
+.meta li.draft { background: rgba(212,171,92,.18); }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.bar-in { max-width: 1180px; margin: 0 auto; height: var(--bar-h); display: flex; align-items: center; gap: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 0 1 auto; text-decoration: none; color: var(--fg); }
+.brand-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 1rem; flex: none; border: 1.5px solid var(--gold); }
+.brand-txt { font-weight: 700; font-size: .9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-txt small { display: block; font-weight: 500; color: var(--muted); font-size: .72rem; line-height: 1.2; }
+.search { position: relative; flex: 1 1 auto; min-width: 0; max-width: 440px; margin-left: auto; }
+.search input {
+  width: 100%; height: 38px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--fg);
+  font: inherit; font-size: .9rem; padding: 0 12px 0 36px;
+}
+.search input::placeholder { color: var(--muted); }
+.search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--muted); pointer-events: none; }
+.icon-btn {
+  flex: none; height: 38px; min-width: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--surface); color: var(--fg); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+}
+.icon-btn:hover { background: var(--accent-soft); }
+.icon-btn svg { width: 18px; height: 18px; }
+.sizes { display: flex; gap: 4px; flex: none; }
+.progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 0; background: var(--gold); }
+
+.results {
+  position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 70;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px rgba(10,25,45,.18);
+  max-height: min(70vh, 520px); overflow-y: auto; padding: 6px;
+}
+.results p.none { margin: 0; padding: 12px; color: var(--muted); font-size: .9rem; }
+.results .count { padding: 6px 10px; font-size: .75rem; color: var(--muted); }
+.results a { display: block; padding: 9px 10px; border-radius: 8px; text-decoration: none; color: var(--fg); }
+.results a:hover, .results a.on { background: var(--accent-soft); }
+.results .r-where { display: block; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-text); font-weight: 700; }
+.results .r-title { display: block; font-weight: 600; font-size: .92rem; }
+.results .r-snip { display: block; font-size: .82rem; color: var(--muted); line-height: 1.5; }
+mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 2px; }
+
+/* ---------- layout ---------- */
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; padding-block: 28px 80px; }
+@media (min-width: 1024px) { .wrap { grid-template-columns: var(--side-w) minmax(0, 1fr); } }
+
+/* sidebar / drawer */
+.toc { font-size: .9rem; }
+.toc-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.toc-head h2 { margin: 0; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc-ch > .toc-link { display: flex; gap: 10px; align-items: baseline; padding: 7px 10px; border-radius: 8px; text-decoration: none; color: var(--fg); line-height: 1.35; }
+.toc-ch > .toc-link:hover { background: var(--accent-soft); }
+.toc-num { flex: none; width: 76px; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.toc-title { min-width: 0; }
+.toc-ch.on > .toc-link { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.toc-ch.on > .toc-link .toc-num { color: var(--gold-text); }
+.toc-sub { display: none; padding: 2px 0 8px 96px !important; }
+.toc-ch.on .toc-sub { display: block; }
+.toc-sub a { display: block; padding: 3px 0; color: var(--muted); text-decoration: none; font-size: .82rem; line-height: 1.4; }
+.toc-sub a:hover, .toc-sub a.on { color: var(--accent); }
+.close-toc { display: none; }
+
+@media (min-width: 1024px) {
+  .toc { position: sticky; top: calc(var(--bar-h) + env(safe-area-inset-top, 0px) + 20px); align-self: start; max-height: calc(100vh - var(--bar-h) - 40px); overflow-y: auto; padding-right: 8px; }
+  .menu-btn { display: none !important; }
+}
+@media (max-width: 1023.98px) {
+  .toc {
+    position: fixed; z-index: 80; top: 0; bottom: 0; left: 0; width: min(88vw, 360px);
+    background: var(--surface); border-right: 1px solid var(--line); overflow-y: auto;
+    padding: calc(16px + env(safe-area-inset-top, 0px)) 14px calc(24px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px));
+    transform: translateX(-105%); transition: transform .25s ease; box-shadow: 8px 0 30px rgba(10,25,45,.2);
+  }
+  .toc.open { transform: none; }
+  .close-toc { display: inline-flex; }
+  .scrim { position: fixed; inset: 0; z-index: 75; background: rgba(8,18,32,.45); }
+  .toc-sub { padding-left: 14px !important; }
+}
+
+/* ---------- reading column ---------- */
+main { min-width: 0; }
+.draft-note {
+  display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; margin-bottom: 28px;
+  background: var(--tbd-bg); color: var(--tbd-fg); border-radius: 12px; font-size: .9rem; line-height: 1.55; max-width: 72ch;
+}
+.draft-note .tbd { flex: none; margin-top: 2px; }
+.chapter { max-width: 72ch; padding-block: 8px 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+.chapter:last-of-type { border-bottom: 0; }
+.ch-head { margin-bottom: 18px; }
+.eyebrow { margin: 0 0 2px; font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-text); font-weight: 700; }
+.chapter h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(1.9rem, 4.5vw, 2.5rem); line-height: 1.1; color: var(--fg); text-wrap: balance; }
+.chapter h2::after { content: ""; display: block; width: 48px; height: 3px; background: var(--gold); margin-top: 12px; border-radius: 2px; }
+.chapter h3 { font-size: 1.12rem; line-height: 1.35; margin: 2em 0 .5em; color: var(--fg); text-wrap: balance; }
+.chapter h3.flash { animation: flash 1.6s ease; }
+@keyframes flash { 0%, 40% { background: var(--mark); } 100% { background: transparent; } }
+.chapter p { margin: 0 0 1em; }
+.chapter ol, .chapter ul { padding-left: 1.4em; margin: 0 0 1.2em; }
+.chapter li { margin: .3em 0; padding-left: .2em; }
+.chapter li::marker { color: var(--gold-text); font-weight: 700; }
+.chapter ol ol { list-style: lower-alpha; margin: .3em 0; }
+.chapter strong { font-weight: 700; }
+.arabic { font-family: var(--f-arab); font-size: 1.6rem; line-height: 1.9; text-align: center; color: var(--gold-text); margin: .4em 0 !important; }
+
+.tbd {
+  display: inline-grid; place-items: center; min-width: 1.35em; height: 1.35em; padding: 0 .2em; border-radius: 6px;
+  background: var(--tbd-bg); color: var(--tbd-fg); font-size: .8em; font-weight: 700; line-height: 1; vertical-align: .08em; cursor: help;
+}
+
+/* tables */
+.tbl { overflow-x: auto; margin: .6em 0 1.6em; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.tbl table { border-collapse: collapse; width: 100%; font-size: .9rem; line-height: 1.55; font-variant-numeric: tabular-nums; }
+.tbl th, .tbl td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.tbl th { background: var(--th-bg); font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; white-space: nowrap; }
+.tbl tr:last-child td { border-bottom: 0; }
+.tbl td:first-child { font-weight: 600; }
+.tbl.kv thead { display: none; }
+.tbl td a { font-weight: 600; text-decoration: none; }
+.tbl td a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .tbl.stack { border: 0; background: transparent; overflow: visible; }
+  .tbl.stack thead { display: none; }
+  .tbl.stack table, .tbl.stack tbody, .tbl.stack tr, .tbl.stack td { display: block; width: 100%; }
+  .tbl.stack tr { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 0; margin-bottom: 10px; }
+  .tbl.stack td { border: 0; padding: 6px 14px; }
+  .tbl.stack td:first-child { font-size: 1rem; padding-top: 10px; }
+  .tbl.stack td:not(:first-child)::before { content: attr(data-label); display: block; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .tbl.stack td:empty { display: none; }
+}
+
+/* formula */
+.formula {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: .4em 0 1.4em; padding: 14px 16px;
+  background: var(--accent-soft); border-radius: 12px; font-size: .92rem;
+}
+.f-lhs { font-weight: 700; }
+.f-frac { display: inline-flex; flex-direction: column; text-align: center; }
+.f-num { padding: 0 6px 4px; border-bottom: 1.5px solid var(--fg); }
+.f-den { padding: 4px 6px 0; }
+
+/* back to top */
+.top-btn {
+  position: fixed; z-index: 40; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--navy); color: var(--gold);
+  display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 20px rgba(10,25,45,.25);
+}
+.top-btn svg { width: 20px; height: 20px; }
+
+footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
+.foot-in { max-width: 1180px; margin: 0 auto; padding-block: 24px calc(24px + env(safe-area-inset-bottom, 0px)); font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
+.foot-in p { margin: 0; }
+
+@media (max-width: 560px) {
+  .brand-txt { display: none; }
+  .sizes { display: none; }
+  .mast-in { padding-block: 28px 26px; }
+  body { line-height: 1.65; }
+}
+</style>
+</head>
+<body>
+<div class="mast"><div class="mast-in gutter">
+  <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+  <p class="kicker">Fitrah Islamic World Academy</p>
+  <h1>Buku Pedoman Pegawai 2026</h1>
+  <p class="lede">Panduan hak, kewajiban, dan tata kerja bagi seluruh guru, tenaga kependidikan, dan tenaga non-kependidikan FIWA.</p>
+  <ul class="meta">
+    <li class="draft">Draf untuk ditelaah</li>
+    <li>Yayasan Ashabul Fitrah Indonesia</li>
+    <li>Ciseeng, Kabupaten Bogor</li>
+  </ul>
+</div></div>
+
+<div class="bar"><div class="bar-in gutter">
+  <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-controls="toc" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    <span>Daftar Isi</span>
+  </button>
+  <a class="brand" href="#panduan"><span class="brand-mark" aria-hidden="true">F</span><span class="brand-txt">Pedoman Pegawai<small>FIWA 2026</small></span></a>
+  <div class="search" role="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Cari topik, misal: cuti" autocomplete="off" aria-label="Cari di buku pedoman" aria-controls="results">
+    <div class="results" id="results" hidden></div>
+  </div>
+  <div class="sizes" role="group" aria-label="Ukuran teks">
+    <button type="button" class="icon-btn" id="fsDown" aria-label="Perkecil teks">A−</button>
+    <button type="button" class="icon-btn" id="fsUp" aria-label="Perbesar teks">A+</button>
+  </div>
+  <div class="progress" id="progress"></div>
+</div></div>
+
+<div class="wrap gutter">
+  <nav class="toc" id="toc" aria-label="Daftar isi">
+    <div class="toc-head"><h2>Daftar Isi</h2>
+      <button type="button" class="icon-btn close-toc" id="closeToc" aria-label="Tutup daftar isi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <ol>
+<li class="toc-ch" data-id="panduan"><a href="#panduan" class="toc-link"><span class="toc-title">Cara Membaca Buku Ini</span></a></li>
+<li class="toc-ch" data-id="bab-1"><a href="#bab-1" class="toc-link"><span class="toc-num">Bab 1</span><span class="toc-title">Muqaddimah</span></a></li>
+<li class="toc-ch" data-id="bab-2"><a href="#bab-2" class="toc-link"><span class="toc-num">Bab 2</span><span class="toc-title">Mengenal FIWA</span></a><ol class="toc-sub"><li><a href="#bab-2-a">A. Sekilas FIWA</a></li><li><a href="#bab-2-b">B. Makna Nama Kami</a></li><li><a href="#bab-2-c">C. Visi dan Misi</a></li><li><a href="#bab-2-d">D. Dua Pilar dan Nilai Inti</a></li><li><a href="#bab-2-e">E. Tata Kelola</a></li><li><a href="#bab-2-f">F. Perlindungan Santri</a></li></ol></li>
+<li class="toc-ch" data-id="bab-3"><a href="#bab-3" class="toc-link"><span class="toc-num">Bab 3</span><span class="toc-title">Ketentuan Umum</span></a><ol class="toc-sub"><li><a href="#bab-3-a">A. Istilah</a></li><li><a href="#bab-3-b">B. Dokumen Kepegawaian</a></li><li><a href="#bab-3-c">C. Aplikasi FIAS</a></li></ol></li>
+<li class="toc-ch" data-id="bab-4"><a href="#bab-4" class="toc-link"><span class="toc-num">Bab 4</span><span class="toc-title">Penerimaan, Status, dan Jenjang Jabatan</span></a><ol class="toc-sub"><li><a href="#bab-4-a">A. Persyaratan Calon Pegawai</a></li><li><a href="#bab-4-b">B. Tahapan Seleksi</a></li><li><a href="#bab-4-c">C. Status Pegawai</a></li><li><a href="#bab-4-d">D. Penempatan</a></li><li><a href="#bab-4-e">E. Grade Jabatan</a></li><li><a href="#bab-4-f">F. Promosi, Mutasi, dan Demosi</a></li></ol></li>
+<li class="toc-ch" data-id="bab-5"><a href="#bab-5" class="toc-link"><span class="toc-num">Bab 5</span><span class="toc-title">Hak dan Kewajiban</span></a><ol class="toc-sub"><li><a href="#bab-5-a">A. Hak Pegawai</a></li><li><a href="#bab-5-b">B. Kewajiban Umum</a></li><li><a href="#bab-5-c">C. Kewajiban Melaksanakan Tugas</a></li><li><a href="#bab-5-d">D. Pembinaan Pegawai</a></li><li><a href="#bab-5-e">E. Penyampaian Pendapat dan Pengaduan</a></li><li><a href="#bab-5-f">F. Pendelegasian Tugas saat Tidak Hadir</a></li></ol></li>
+<li class="toc-ch" data-id="bab-6"><a href="#bab-6" class="toc-link"><span class="toc-num">Bab 6</span><span class="toc-title">Akhlak, Etika, dan Penampilan</span></a><ol class="toc-sub"><li><a href="#bab-6-a">A. Etika Kepegawaian</a></li><li><a href="#bab-6-b">B. Etika Berkomunikasi</a></li><li><a href="#bab-6-c">C. Akhlak di Dalam dan di Luar Lingkungan Kerja</a></li><li><a href="#bab-6-d">D. Tata Tertib Kerja</a></li><li><a href="#bab-6-e">E. Standar Penampilan</a></li></ol></li>
+<li class="toc-ch" data-id="bab-7"><a href="#bab-7" class="toc-link"><span class="toc-num">Bab 7</span><span class="toc-title">Larangan</span></a><ol class="toc-sub"><li><a href="#bab-7-a">A. Milik Yayasan</a></li><li><a href="#bab-7-b">B. Lingkungan dan Keselamatan</a></li><li><a href="#bab-7-c">C. Risywah, Gratifikasi, dan KKN</a></li><li><a href="#bab-7-d">D. Kepentingan Pribadi dan Pekerjaan Lain</a></li><li><a href="#bab-7-e">E. Kejujuran Administrasi</a></li><li><a href="#bab-7-f">F. Lain-lain</a></li></ol></li>
+<li class="toc-ch" data-id="bab-8"><a href="#bab-8" class="toc-link"><span class="toc-num">Bab 8</span><span class="toc-title">Waktu Kerja, Lembur, dan Perjalanan Dinas</span></a><ol class="toc-sub"><li><a href="#bab-8-a">A. Jam Kerja</a></li><li><a href="#bab-8-b">B. Lembur</a></li><li><a href="#bab-8-c">C. Perjalanan Dinas</a></li></ol></li>
+<li class="toc-ch" data-id="bab-9"><a href="#bab-9" class="toc-link"><span class="toc-num">Bab 9</span><span class="toc-title">Kehadiran dan Izin</span></a><ol class="toc-sub"><li><a href="#bab-9-a">A. Ringkasan: Apa yang Harus Saya Lakukan?</a></li><li><a href="#bab-9-b">B. Pencatatan Kehadiran</a></li><li><a href="#bab-9-c">C. Sakit</a></li><li><a href="#bab-9-d">D. Izin Pribadi</a></li><li><a href="#bab-9-e">E. Cuti Normatif (Izin dengan Upah Penuh)</a></li><li><a href="#bab-9-f">F. Izin Khusus dari Yayasan</a></li><li><a href="#bab-9-g">G. Keterlambatan (Pegawai Selain Guru)</a></li><li><a href="#bab-9-h">H. Mangkir</a></li></ol></li>
+<li class="toc-ch" data-id="bab-10"><a href="#bab-10" class="toc-link"><span class="toc-num">Bab 10</span><span class="toc-title">Cuti</span></a><ol class="toc-sub"><li><a href="#bab-10-a">A. Jenis Cuti</a></li><li><a href="#bab-10-b">B. Cuti Tahunan</a></li><li><a href="#bab-10-c">C. Cuti Besar</a></li><li><a href="#bab-10-d">D. Cuti Melahirkan</a></li><li><a href="#bab-10-e">E. Prosedur Pengajuan Cuti</a></li></ol></li>
+<li class="toc-ch" data-id="bab-11"><a href="#bab-11" class="toc-link"><span class="toc-num">Bab 11</span><span class="toc-title">Gaji dan Potongan</span></a><ol class="toc-sub"><li><a href="#bab-11-a">A. Penetapan dan Kenaikan Gaji</a></li><li><a href="#bab-11-b">B. Komponen Penghasilan</a></li><li><a href="#bab-11-c">C. Pembayaran Gaji</a></li><li><a href="#bab-11-d">D. Dampak Ketidakhadiran (Pegawai Selain Guru)</a></li><li><a href="#bab-11-e">E. Potongan bagi Guru</a></li><li><a href="#bab-11-f">F. Gaji Selama Sakit Berkepanjangan</a></li></ol></li>
+<li class="toc-ch" data-id="bab-12"><a href="#bab-12" class="toc-link"><span class="toc-num">Bab 12</span><span class="toc-title">Kesejahteraan</span></a><ol class="toc-sub"><li><a href="#bab-12-a">A. Ringkasan Program</a></li><li><a href="#bab-12-b">B. BPJS</a></li><li><a href="#bab-12-c">C. Tunjangan Hari Raya (THR)</a></li><li><a href="#bab-12-d">D. Uang Duka</a></li><li><a href="#bab-12-e">E. Hadiah Pernikahan dan Kelahiran</a></li><li><a href="#bab-12-f">F. Pinjaman</a></li></ol></li>
+<li class="toc-ch" data-id="bab-13"><a href="#bab-13" class="toc-link"><span class="toc-num">Bab 13</span><span class="toc-title">Pelanggaran dan Sanksi</span></a><ol class="toc-sub"><li><a href="#bab-13-a">A. Tingkatan Sanksi</a></li><li><a href="#bab-13-b">B. Klasifikasi Pelanggaran</a></li><li><a href="#bab-13-c">C. Ketentuan Surat Peringatan</a></li><li><a href="#bab-13-d">D. Bentuk Sanksi Lain</a></li></ol></li>
+<li class="toc-ch" data-id="bab-14"><a href="#bab-14" class="toc-link"><span class="toc-num">Bab 14</span><span class="toc-title">Berakhirnya Hubungan Kerja</span></a><ol class="toc-sub"><li><a href="#bab-14-a">A. Penyebab</a></li><li><a href="#bab-14-b">B. Mengundurkan Diri</a></li><li><a href="#bab-14-c">C. Sakit Berkepanjangan</a></li><li><a href="#bab-14-d">D. Mangkir</a></li><li><a href="#bab-14-e">E. Kesalahan Berat</a></li><li><a href="#bab-14-f">F. Hak dan Kewajiban saat PHK</a></li></ol></li>
+<li class="toc-ch" data-id="bab-15"><a href="#bab-15" class="toc-link"><span class="toc-num">Bab 15</span><span class="toc-title">Penutup</span></a></li>
+<li class="toc-ch" data-id="lampiran-1"><a href="#lampiran-1" class="toc-link"><span class="toc-num">Lampiran 1</span><span class="toc-title">Layanan FIAS</span></a></li>
+<li class="toc-ch" data-id="lampiran-2"><a href="#lampiran-2" class="toc-link"><span class="toc-num">Lampiran 2</span><span class="toc-title">Tenggat Waktu Penting</span></a></li>
+<li class="toc-ch" data-id="lampiran-3"><a href="#lampiran-3" class="toc-link"><span class="toc-num">Lampiran 3</span><span class="toc-title">Uraian Tugas Pokok Jabatan</span></a></li>
+<li class="toc-ch" data-id="lampiran-4"><a href="#lampiran-4" class="toc-link"><span class="toc-num">Lampiran 4</span><span class="toc-title">Surat Pernyataan Kesanggupan</span></a></li>
+    </ol>
+  </nav>
+  <main id="main">
+    <div class="draft-note"><span class="tbd" aria-hidden="true">†</span><span>Ini adalah draf. Ketentuan bertanda <strong>†</strong> masih menunggu keputusan Pimpinan FIWA dan dapat berubah sebelum buku ditetapkan.</span></div>
+
+<section class="chapter" id="panduan" aria-labelledby="panduan-h"><header class="ch-head"><p class="eyebrow">Mulai di sini</p><h2 id="panduan-h">Cara Membaca Buku Ini</h2></header>
+
+<p>Buku ini mengikuti perjalanan seorang pegawai: mengenal FIWA, diterima bekerja, menjalankan tugas sehari-hari, menerima hak, hingga berakhirnya hubungan kerja. Tidak perlu dibaca berurutan; gunakan tabel di bawah untuk langsung menuju pertanyaan Anda.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Pertanyaan Anda</th>
+<th>Lihat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apa visi, misi, dan nilai FIWA?</td>
+<td>Bab 2</td>
+</tr>
+<tr>
+<td>Apa arti istilah tertentu (THP, upah, mangkir, Musyrif)?</td>
+<td>Bab 3 bagian A</td>
+</tr>
+<tr>
+<td>Bagaimana cara mengajukan izin, cuti, lembur di FIAS?</td>
+<td>Bab 3 bagian C dan <a href="#lampiran-1">Lampiran 1</a></td>
+</tr>
+<tr>
+<td>Berapa lama masa percobaan dan kapan diangkat tetap?</td>
+<td>Bab 4</td>
+</tr>
+<tr>
+<td>Apa yang wajib dan dilarang?</td>
+<td>Bab 5, 6, 7</td>
+</tr>
+<tr>
+<td>Jam kerja dan lembur?</td>
+<td>Bab 8</td>
+</tr>
+<tr>
+<td>Saya sakit, terlambat, atau perlu izin, apa yang dilakukan?</td>
+<td>Bab 9</td>
+</tr>
+<tr>
+<td>Berapa hak cuti saya?</td>
+<td>Bab 10</td>
+</tr>
+<tr>
+<td>Bagaimana gaji dihitung dan kapan dipotong?</td>
+<td>Bab 11</td>
+</tr>
+<tr>
+<td>BPJS, THR, dan tunjangan lain?</td>
+<td>Bab 12</td>
+</tr>
+<tr>
+<td>Apa sanksi untuk pelanggaran tertentu?</td>
+<td>Bab 13</td>
+</tr>
+<tr>
+<td>Bagaimana jika ingin mengundurkan diri?</td>
+<td>Bab 14</td>
+</tr>
+<tr>
+<td>Kapan batas waktu pengajuan?</td>
+<td>Lampiran 2</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="bab-1" aria-labelledby="bab-1-h"><header class="ch-head"><p class="eyebrow">Bab 1</p><h2 id="bab-1-h">Muqaddimah</h2></header>
+
+<p class="arabic" lang="ar" dir="rtl">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+<p class="arabic" lang="ar" dir="rtl">بِسْمِ اللهِ، وَالْحَمْدُ لِلّٰهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُوْلِ اللهِ</p>
+<p>Segala puji bagi Allah Subhanahu wa Ta'ala. Shalawat dan salam semoga tercurah kepada Nabi Muhammad Shallallahu 'Alaihi wa Sallam, keluarga, sahabat, dan para pengikutnya hingga akhir zaman.</p>
+<p>Mu'amalah dalam Islam memerlukan aturan yang disepakati bersama. Buku Pedoman Pegawai ini disusun agar hubungan kerja di FIWA berjalan adil, tertib, dan menenangkan, berlandaskan Al-Qur'an dan As-Sunnah sesuai pemahaman salafush shalih.</p>
+<p>Buku ini bertujuan:</p>
+<ol>
+<li>Memperjelas hak dan kewajiban pegawai sehingga tercipta ketenangan kerja dalam lingkup dakwah dan pendidikan.</li>
+<li>Menjadi rujukan bersama antara pegawai, guru, dan pimpinan dalam menjalankan amanah mendidik santri.</li>
+<li>Menciptakan hubungan kerja yang harmonis demi kualitas pendidikan dan tercapainya visi FIWA.</li>
+<li>Memperhatikan kesejahteraan pegawai serta memberi kesempatan dan bimbingan untuk maju berdasarkan profesionalitas, amanah, dan prestasi kerja.</li>
+</ol>
+<p>Semoga Allah memudahkan kita semua menjaga amanah ini. Aamiin.</p>
+<p>Ciseeng, Bogor, ........ 2026</p>
+<p><strong>Ust. Johansyah, ST.</strong> Mudir Fitrah Islamic World Academy <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></p>
+
+</section>
+<section class="chapter" id="bab-2" aria-labelledby="bab-2-h"><header class="ch-head"><p class="eyebrow">Bab 2</p><h2 id="bab-2-h">Mengenal FIWA</h2></header>
+
+<h3 id="bab-2-a">A. Sekilas FIWA</h3>
+<p>Fitrah Islamic World Academy (FIWA) adalah pesantren manhaj salaf berasrama penuh untuk jenjang SMP dan SMA (Kelas 7–12) di Ciseeng, Kabupaten Bogor. FIWA menjaga kemurnian aqidah sesuai pemahaman salafush shalih sekaligus mengantar santri menuju keunggulan akademik bertaraf global. FIWA didirikan oleh Ustadz Johansyah, ST.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Identitas</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Badan penyelenggara</td>
+<td>Yayasan Ashabul Fitrah Indonesia (YAFI) · NPYP AW9270 · akta notaris No. 34 tanggal 8 Januari 2015 (Notaris Nur Aziz Hakim, SH, MM, M.Kn)</td>
+</tr>
+<tr>
+<td>Satuan pendidikan</td>
+<td>SMP FIWA (NPSN 69963024, Akreditasi A, sejak 2017) · SMA FIWA (NPSN 69978378, Akreditasi A, sejak 2018)</td>
+</tr>
+<tr>
+<td>Rekam internasional</td>
+<td>SMA FIWA terdaftar Cambridge International School sejak 2018 (ID Centre 386)</td>
+</tr>
+<tr>
+<td>Model pendidikan</td>
+<td>Pesantren asrama penuh 6 tahun; santri putra (Ikhwan) dan putri (Akhwat) terpisah penuh dalam satu kompleks</td>
+</tr>
+<tr>
+<td>Kurikulum</td>
+<td>Kurikulum nasional (Permendikdasmen No. 13 Tahun 2025, Pembelajaran Mendalam), diperkaya standar internasional, dipadukan kurikulum diniyah manhaj salaf</td>
+</tr>
+<tr>
+<td>Peserta didik</td>
+<td>±661 santri (Tahun Ajaran 2026/2027)</td>
+</tr>
+<tr>
+<td>Alamat</td>
+<td>Jl. H. Miing No. 67, Desa Karihkil, Kecamatan Ciseeng, Kabupaten Bogor, Jawa Barat 16120</td>
+</tr>
+<tr>
+<td>Kontak</td>
+<td>info@fiwa.sch.id · +62 811 1222 3777 · www.fiwaschool.com · Instagram @fiwaschool</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-2-b">B. Makna Nama Kami</h3>
+<p><em>Fitrah</em> adalah komitmen menjaga fitrah suci yang Allah tanamkan pada setiap anak. Setiap santri adalah amanah yang akan dipertanggungjawabkan. Karena itu keselamatan, kenyamanan, dan kehormatan santri menjadi prioritas yang tidak dapat ditawar oleh setiap pegawai.</p>
+<h3 id="bab-2-c">C. Visi dan Misi</h3>
+<p><strong>Visi:</strong> mempersiapkan generasi santri manhaj salaf yang memiliki kedalaman diniyah dan keunggulan akademik global, mampu masuk Top University, dan kembali memberikan khidmat untuk ummah.</p>
+<p><strong>Misi:</strong></p>
+<ol>
+<li>Menanamkan aqidah manhaj salaf yang murni melalui kurikulum diniyah berbasis dalil dengan jalur keilmuan yang dijaga ketat.</li>
+<li>Mengantar setiap santri menaiki Tangga Yaqin, hingga nilai menjadi identitas, bukan sekadar hafalan.</li>
+<li>Mempersiapkan santri menuju universitas terbaik nasional dan dunia melalui lima gerbang target eksternal: TKA, SNBT, SAT, IELTS, dan OSN.</li>
+<li>Membentuk empat profil lulusan: Saintis &amp; Profesional Muslim, Pemimpin &amp; Cendekia Sosial, Qudwah Global Muslim, serta Da'i &amp; Mu'allim Penjaga Ilmu.</li>
+<li>Menjaga pilar tarbawi dan pilar akademik secara paralel, saling memperkuat dan tidak saling mengorbankan.</li>
+<li>Mengakarkan santri pada khidmat ummah melalui program berkelanjutan dari pra-santri hingga alumni.</li>
+</ol>
+<h3 id="bab-2-d">D. Dua Pilar dan Nilai Inti</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Pilar</th>
+<th>Makna bagi pekerjaan pegawai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tarbawi</td>
+<td>Kedalaman diniyah dan karakter Islami yang berujung pada yaqin; setiap pegawai menjadi teladan adab bagi santri</td>
+</tr>
+<tr>
+<td>Akademik</td>
+<td>Keunggulan akademik menuju universitas terbaik sebagai bekal khidmat; setiap pegawai mendukung mutu pembelajaran</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nilai inti yang dijaga seluruh pegawai: <strong>manhaj salaf · niat–sabar–adab · khidmat ummah</strong>.</p>
+<h3 id="bab-2-e">E. Tata Kelola</h3>
+<ol>
+<li>FIWA diselenggarakan oleh Yayasan Ashabul Fitrah Indonesia dan dipimpin seorang <strong>Mudir</strong> (direktur pendidikan) yang membawahi Kepala Sekolah SMP dan SMA.</li>
+<li>Seluruh konten keagamaan ditelaah <strong>SHD</strong> (SH Diniyah dan Pengasuhan) sebelum diajarkan.</li>
+<li>Manajemen mutu mengacu pada ISO 21001:2018 dengan kepatuhan pada regulasi nasional, termasuk UU No. 18 Tahun 2019 tentang Pesantren.</li>
+</ol>
+<h3 id="bab-2-f">F. Perlindungan Santri</h3>
+<p>FIWA menegakkan pencegahan dan penanganan kekerasan melalui <strong>TPPK</strong> sesuai Permendikbudristek No. 46 Tahun 2023. Setiap pegawai wajib:</p>
+<ol>
+<li>Tidak melakukan kekerasan fisik, psikis, verbal, maupun seksual terhadap santri dalam bentuk apa pun.</li>
+<li>Melaporkan setiap dugaan kekerasan yang diketahui kepada TPPK.</li>
+<li>Bekerja sama dalam proses pencegahan dan penanganan yang dilakukan TPPK.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-3" aria-labelledby="bab-3-h"><header class="ch-head"><p class="eyebrow">Bab 3</p><h2 id="bab-3-h">Ketentuan Umum</h2></header>
+
+<h3 id="bab-3-a">A. Istilah</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Istilah</th>
+<th>Arti dalam buku ini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yayasan</td>
+<td>Yayasan Ashabul Fitrah Indonesia (YAFI)</td>
+</tr>
+<tr>
+<td>FIWA / Ma'had</td>
+<td>Fitrah Islamic World Academy, termasuk seluruh unit sekolah, asrama, dan pendukungnya</td>
+</tr>
+<tr>
+<td>Mudir</td>
+<td>Direktur pendidikan FIWA yang membawahi Kepala Sekolah SMP dan SMA</td>
+</tr>
+<tr>
+<td>Pimpinan FIWA</td>
+<td>Mudir beserta jajaran direktur yang ditetapkan dengan SK Ketua Yayasan <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+</tr>
+<tr>
+<td>SHD</td>
+<td>SH Diniyah dan Pengasuhan; menelaah konten keagamaan dan menetapkan kitab rujukan</td>
+</tr>
+<tr>
+<td>Pegawai</td>
+<td>Tenaga kerja yang dipekerjakan berdasarkan SK Pengangkatan atau perjanjian kerja dengan Yayasan</td>
+</tr>
+<tr>
+<td>Pegawai tetap</td>
+<td>Pegawai dengan Perjanjian Kerja Waktu Tidak Tertentu (PKWTT)</td>
+</tr>
+<tr>
+<td>Pegawai kontrak</td>
+<td>Pegawai dengan Perjanjian Kerja Waktu Tertentu (PKWT)</td>
+</tr>
+<tr>
+<td>Tenaga Kependidikan</td>
+<td>Pegawai yang tugasnya berkaitan langsung dengan aktivitas santri, termasuk guru, Musyrif, dan PDC</td>
+</tr>
+<tr>
+<td>Guru</td>
+<td>Guru Umum dan Guru Diniyyah</td>
+</tr>
+<tr>
+<td>Tenaga Non-Kependidikan</td>
+<td>Pegawai pendukung yang tidak langsung berkaitan dengan aktivitas santri</td>
+</tr>
+<tr>
+<td>Musyrif</td>
+<td>Pengasuh asrama santri</td>
+</tr>
+<tr>
+<td>PDC</td>
+<td>Pendamping perkembangan pribadi dan afektif santri</td>
+</tr>
+<tr>
+<td>TPPK</td>
+<td>Tim Pencegahan dan Penanganan Kekerasan di satuan pendidikan</td>
+</tr>
+<tr>
+<td>Atasan langsung</td>
+<td>Atasan yang tercatat di data pegawai pada FIAS; bila tidak ada, kepala departemen</td>
+</tr>
+<tr>
+<td>HRD</td>
+<td>Bagian Sumber Daya Manusia FIWA</td>
+</tr>
+<tr>
+<td>FIAS</td>
+<td>Aplikasi layanan kepegawaian FIWA</td>
+</tr>
+<tr>
+<td>Periode penggajian</td>
+<td>Tanggal 26 bulan sebelumnya s.d. tanggal 25 bulan berjalan</td>
+</tr>
+<tr>
+<td>Hari kerja terjadwal</td>
+<td>Hari kerja sesuai jadwal kerja atau jadwal shift pegawai di FIAS</td>
+</tr>
+<tr>
+<td>THP Dasar</td>
+<td>Gaji Pokok + Tunjangan Kehadiran + Tunjangan Transportasi</td>
+</tr>
+<tr>
+<td>Upah</td>
+<td>Gaji pokok + tunjangan tetap; dasar perhitungan lembur, THR, BPJS Ketenagakerjaan, dan gaji saat sakit panjang</td>
+</tr>
+<tr>
+<td>JP</td>
+<td>Jam Pelajaran sesuai jadwal mengajar</td>
+</tr>
+<tr>
+<td>Cuti normatif</td>
+<td>Izin dengan upah penuh untuk keperluan yang diatur undang-undang</td>
+</tr>
+<tr>
+<td>Cuti bersama</td>
+<td>Hari libur yang ditetapkan Yayasan dan mengurangi jatah cuti tahunan</td>
+</tr>
+<tr>
+<td>Mangkir</td>
+<td>Tidak hadir pada hari kerja tanpa izin yang disetujui di FIAS</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-3-b">B. Dokumen Kepegawaian</h3>
+<p>Dokumen berikut merupakan satu kesatuan yang wajib dipahami dan dipatuhi. Bila ada perbedaan, urutan yang lebih atas didahulukan, kecuali peraturan perundang-undangan menentukan lain.</p>
+<ol>
+<li><strong>Perjanjian kerja (PKWT atau PKWTT) dan SK Pengangkatan:</strong> dasar hubungan kerja, memuat hak, kewajiban, masa kerja, dan penghasilan.</li>
+<li><strong>Buku Pedoman Pegawai ini:</strong> ketentuan umum tentang disiplin, tata tertib, dan mekanisme kerja.</li>
+<li><strong>SOP dan Kode Etik:</strong> pedoman pelaksanaan pekerjaan sesuai standar profesional dan nilai Islam.</li>
+<li><strong>Keputusan dan kebijakan Pimpinan FIWA:</strong> ketentuan operasional yang ditetapkan atau diperbarui sesuai kebutuhan.</li>
+</ol>
+<h3 id="bab-3-c">C. Aplikasi FIAS</h3>
+<p>Seluruh pengajuan kepegawaian dilakukan melalui FIAS, dari ponsel maupun komputer, dengan akun masing-masing. Formulir kertas tidak digunakan lagi.</p>
+<p><strong>Alur pengajuan:</strong></p>
+<ol>
+<li>Pegawai memberi tahu atasan bila diperlukan (misalnya saat sakit atau izin mendadak).</li>
+<li>Pegawai mengajukan melalui menu <strong>Ajukan</strong>, memilih jenis pengajuan, mengisi tanggal dan alasan, serta melampirkan foto atau PDF dokumen pendukung.</li>
+<li>Atasan langsung menyetujui sebagai persetujuan meninggalkan tugas.</li>
+<li>HRD menyetujui sebagai persetujuan administrasi kehadiran.</li>
+<li>Pengajuan sah setelah berstatus <strong>Disetujui</strong>. Status dipantau di menu <strong>Pengajuan Saya</strong>; pengajuan yang belum diputuskan dapat dibatalkan sendiri.</li>
+</ol>
+<p><strong>Ketentuan akun:</strong></p>
+<ol>
+<li>Pegawai dan penyetuju menerima pemberitahuan di setiap tahap.</li>
+<li>Akun wajib dijaga kerahasiaannya dan tidak boleh dipinjamkan.</li>
+<li>Kendala aplikasi disampaikan kepada HRD.</li>
+</ol>
+<p>Daftar lengkap menu ada di Lampiran 1.</p>
+
+</section>
+<section class="chapter" id="bab-4" aria-labelledby="bab-4-h"><header class="ch-head"><p class="eyebrow">Bab 4</p><h2 id="bab-4-h">Penerimaan, Status, dan Jenjang Jabatan</h2></header>
+
+<h3 id="bab-4-a">A. Persyaratan Calon Pegawai</h3>
+<ol>
+<li>Beragama Islam dan berpegang pada manhaj Ahlussunnah wal Jama'ah sesuai pemahaman salafush shalih, dengan aqidah yang lurus.</li>
+<li>Lancar membaca Al-Qur'an.</li>
+<li>Tidak merokok.</li>
+<li>Warga Negara Indonesia, berusia minimal 18 tahun.</li>
+<li>Sehat jasmani dan rohani.</li>
+<li>Bersedia menaati Peraturan Yayasan dan menandatangani Surat Pernyataan Kesanggupan (Lampiran 4).</li>
+</ol>
+<h3 id="bab-4-b">B. Tahapan Seleksi</h3>
+<ol>
+<li>Seleksi administrasi.</li>
+<li>Tes komitmen.</li>
+<li>Tes baca tulis Al-Qur'an dan bahasa Arab.</li>
+<li>Ujian tertulis: dasar-dasar diniyah, psikologi dan kepribadian, serta kompetensi bidang.</li>
+<li>Ujian praktik sesuai bidang (misalnya micro teaching bagi guru).</li>
+<li>Wawancara.</li>
+</ol>
+<p>Penerimaan disesuaikan dengan kebutuhan FIWA.</p>
+<h3 id="bab-4-c">C. Status Pegawai</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Dasar</th>
+<th>Lama</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Masa percobaan</td>
+<td>Calon pegawai tetap (PKWTT)</td>
+<td>3 bulan</td>
+<td>Dinilai atasan langsung bersama Kepala Sekolah/Kepala Divisi</td>
+</tr>
+<tr>
+<td>Pegawai kontrak</td>
+<td>PKWT</td>
+<td>Sesuai perjanjian kerja</td>
+<td>Tidak ada masa percobaan</td>
+</tr>
+<tr>
+<td>Pegawai tetap</td>
+<td>PKWTT dan SK Pengangkatan</td>
+<td>–</td>
+<td>Setelah lulus masa percobaan atau penilaian pengangkatan</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Masa percobaan:</strong></p>
+<ol>
+<li>Bagi guru, masa percobaan digunakan untuk mempelajari pengelolaan kelas dan pendekatan kepada santri; bagi pegawai lain, untuk mempelajari tugasnya.</li>
+<li>Selama masa percobaan, gaji yang diterima 80% dari gaji pokok, dan tidak kurang dari upah minimum yang berlaku. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li>Selama masa percobaan, Yayasan maupun pegawai dapat mengakhiri hubungan kerja sewaktu-waktu tanpa pesangon.</li>
+<li>Pegawai yang lulus menerima SK Pengangkatan; yang tidak lulus menerima surat ucapan terima kasih.</li>
+</ol>
+<p><strong>Penilaian pengangkatan</strong> menjadi pegawai tetap mencakup: disiplin, komunikasi, akhlak, kinerja, loyalitas, adab berpakaian dan pergaulan di dalam maupun di luar lingkungan kerja, tidak terlibat tindak kriminal, dan tercapainya standar kerja. Usulan diajukan atasan langsung kepada Pimpinan FIWA melalui HRD.</p>
+<p><strong>Komitmen pengabdian.</strong> Pegawai tetap menandatangani perjanjian pengabdian minimal 2 tahun. Sanksi bila berhenti sebelum masa itu dicantumkan dalam perjanjian. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></p>
+<h3 id="bab-4-d">D. Penempatan</h3>
+<ol>
+<li>Setiap pegawai wajib menerima penempatan kerja dari pimpinan sesuai kapasitas dan kapabilitasnya.</li>
+<li>Penempatan dikelompokkan menjadi Tenaga Kependidikan dan Tenaga Non-Kependidikan. Pengelompokan ini menentukan jam kerja (Bab 8), cuti bersama (Bab 10), dan masa pemberitahuan pengunduran diri (Bab 14).</li>
+</ol>
+<h3 id="bab-4-e">E. Grade Jabatan</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Jabatan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F1–F2</td>
+<td>Director</td>
+</tr>
+<tr>
+<td>E1–E2</td>
+<td>Head/Manager</td>
+</tr>
+<tr>
+<td>D1–D2</td>
+<td>Manager Assistant/Officer</td>
+</tr>
+<tr>
+<td>C1–C2</td>
+<td>Staf (berpengalaman/administratif)</td>
+</tr>
+<tr>
+<td>B1–B2</td>
+<td>Pelaksana (staf operasional/baru)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-4-f">F. Promosi, Mutasi, dan Demosi</h3>
+<ol>
+<li>Kepala divisi menyusun usulan berdasarkan analisis kinerja dan kebutuhan posisi, memuat pertimbangan prestasi dan kondite pegawai, dengan tembusan ke HRD.</li>
+<li>Usulan disetujui Pimpinan FIWA; HRD menyiapkan SK, yang disampaikan oleh atasan pegawai.</li>
+<li>Demosi dilakukan bila pegawai tidak mampu menjalankan jabatannya setelah mendapat pembinaan.</li>
+<li>Pegawai yang dipromosikan atau dimutasi menjalani <strong>masa orientasi 3 bulan</strong>, dapat diperpanjang satu kali hingga paling lama 6 bulan.</li>
+<li>Selama orientasi, pegawai yang dipromosikan menerima gaji lama dengan tunjangan jabatan baru. Gaji disesuaikan setelah lulus orientasi.</li>
+<li>Bila tidak lulus orientasi, pegawai kembali ke posisi semula.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-5" aria-labelledby="bab-5-h"><header class="ch-head"><p class="eyebrow">Bab 5</p><h2 id="bab-5-h">Hak dan Kewajiban</h2></header>
+
+<h3 id="bab-5-a">A. Hak Pegawai</h3>
+<ol>
+<li>Tugas dan pekerjaan sesuai posisi berdasarkan SK, kebijakan, dan arahan atasan.</li>
+<li>Gaji, tunjangan, dan pendapatan lain sesuai pekerjaan dan tanggung jawab (Bab 11).</li>
+<li>Waktu istirahat, hari libur, dan cuti (Bab 8 dan 10).</li>
+<li>Program kesejahteraan sesuai masa kerja (Bab 12).</li>
+<li>Lingkungan kerja yang aman, nyaman, dan kondusif.</li>
+<li>Pengembangan kompetensi melalui pelatihan, pembinaan, dan studi lanjut dengan persetujuan Pimpinan FIWA.</li>
+<li>Promosi atau penghargaan sesuai prestasi kerja.</li>
+<li>Menyampaikan pendapat, saran, dan pengaduan (bagian E).</li>
+</ol>
+<h3 id="bab-5-b">B. Kewajiban Umum</h3>
+<ol>
+<li><strong>Ketaatan:</strong> mematuhi peraturan dan kebijakan FIWA.</li>
+<li><strong>Kerahasiaan:</strong> menjaga data dan informasi FIWA, termasuk yang diketahui karena jabatan, di dalam maupun di luar lingkungan kerja.</li>
+<li><strong>Loyalitas:</strong> mendukung visi dan misi FIWA, menjaga nama baiknya, dan mengutamakan kepentingan lembaga di atas kepentingan pribadi.</li>
+<li><strong>Menjaga nilai keislaman:</strong> menjalankan ibadah dan mu'amalah sesuai syariat, berdasarkan Al-Qur'an dan As-Sunnah sesuai manhaj Salafush Shalih.</li>
+</ol>
+<h3 id="bab-5-c">C. Kewajiban Melaksanakan Tugas</h3>
+<p><strong>Semua pegawai:</strong></p>
+<ol>
+<li>Mengemban amanah dengan sungguh-sungguh dan niat ikhlas karena Allah Ta'ala.</li>
+<li>Bekerja jujur, tertib, cermat, dan bersemangat.</li>
+<li>Memberi keterangan yang benar tentang pekerjaannya dan melaporkan hasil kerja sesuai arahan pimpinan.</li>
+<li>Menjaga kekompakan, persatuan, dan suasana kerja yang baik.</li>
+<li>Menggunakan dan memelihara barang milik Yayasan dengan sebaik-baiknya.</li>
+</ol>
+<p><strong>Tambahan bagi pegawai yang memiliki bawahan:</strong></p>
+<ol>
+<li>Membimbing bawahan dan memberi teladan yang baik.</li>
+<li>Mendorong bawahan meningkatkan prestasi dan memberi kesempatan mengembangkan karier.</li>
+<li>Menilai kinerja bawahan secara objektif dan menjalankan pembinaan sesuai Bab 13.</li>
+</ol>
+<p>Uraian tugas pokok tiap jabatan ada di Lampiran 3.</p>
+<h3 id="bab-5-d">D. Pembinaan Pegawai</h3>
+<ol>
+<li>Pembinaan mencakup aspek <strong>ruhiyah</strong> (keimanan dan ibadah), <strong>lahiriyah</strong> (akhlak dan penampilan), dan <strong>manajemen</strong> (kompetensi kerja).</li>
+<li>Bentuknya pengarahan pribadi maupun kegiatan bersama: kajian, pelatihan, seminar, dan sejenisnya.</li>
+<li>Pembinaan yang ditetapkan Yayasan <strong>wajib diikuti</strong> semua pegawai.</li>
+</ol>
+<h3 id="bab-5-e">E. Penyampaian Pendapat dan Pengaduan</h3>
+<p>Hubungan antarpegawai dilandasi ukhuwah islamiyah, dengan komunikasi dua arah yang terbuka dan bertanggung jawab.</p>
+<ol>
+<li>Sampaikan pendapat, saran, keluhan, atau pengaduan lebih dahulu kepada atasan langsung, secara lisan atau tertulis.</li>
+<li>Bila belum terselesaikan, teruskan secara tertulis kepada atasan yang lebih tinggi, lalu kepada HRD dan Pimpinan FIWA, dengan sepengetahuan atasan langsung.</li>
+<li>Pengaduan yang menyangkut atasan langsung sendiri dapat disampaikan langsung kepada HRD.</li>
+<li>Pengaduan dugaan kekerasan terhadap santri disampaikan kepada TPPK.</li>
+</ol>
+<h3 id="bab-5-f">F. Pendelegasian Tugas saat Tidak Hadir</h3>
+<ol>
+<li>Pegawai yang tidak hadir menyerahkan tugas rutinnya kepada rekan atau wakil yang ditunjuk, dengan sepengetahuan atasan.</li>
+<li>Guru yang tidak hadir menyiapkan bahan ajar untuk guru pengganti (badal).</li>
+<li>Pimpinan yang tidak hadir meminta izin kepada atasannya dan mendelegasikan tugas kepada wakil.</li>
+<li>Atasan berwenang menunjuk pegawai lain untuk mengisi tugas yang ditinggalkan.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-6" aria-labelledby="bab-6-h"><header class="ch-head"><p class="eyebrow">Bab 6</p><h2 id="bab-6-h">Akhlak, Etika, dan Penampilan</h2></header>
+
+<p>Pegawai FIWA adalah qudwah (teladan) bagi santri, orang tua, dan masyarakat. Karena itu ketentuan bab ini berlaku di dalam maupun di luar lingkungan kerja, kecuali disebutkan lain.</p>
+<h3 id="bab-6-a">A. Etika Kepegawaian</h3>
+<ol>
+<li><strong>Berakhlak Islami:</strong> santun, jujur, amanah, rendah hati, dan menjaga adab.</li>
+<li><strong>Profesional:</strong> disiplin, bertanggung jawab, tepat waktu, dan memberi hasil kerja terbaik.</li>
+<li><strong>Menjaga hubungan kerja:</strong> bekerja sama, saling menghormati, menghargai perbedaan, dan mengedepankan tabayyun serta husnudzan.</li>
+<li><strong>Menjadi teladan:</strong> menjaga ucapan, perilaku, penampilan, dan pergaulan.</li>
+</ol>
+<h3 id="bab-6-b">B. Etika Berkomunikasi</h3>
+<ol>
+<li>Menggunakan bahasa yang sopan dan menyampaikan pendapat dengan cara yang baik.</li>
+<li>Tidak menyebarkan data, dokumen, atau informasi internal tanpa izin Yayasan.</li>
+<li>Bijak bermedia sosial: tidak mengunggah, berkomentar, atau beraktivitas yang merugikan nama baik FIWA, rekan kerja, santri, atau wali santri.</li>
+<li>Tidak mengunggah foto atau data santri tanpa izin lembaga.</li>
+</ol>
+<h3 id="bab-6-c">C. Akhlak di Dalam dan di Luar Lingkungan Kerja</h3>
+<p>Pegawai dilarang:</p>
+<ol>
+<li>Berkhalwat atau berboncengan kendaraan dengan lawan jenis yang bukan mahram.</li>
+<li>Merokok, meminum minuman keras, mendatangi tempat hiburan malam, berzina, dan perbuatan sejenis.</li>
+<li>Tidak menutup aurat secara syar'i.</li>
+<li>Berghibah, namimah, fitnah, tajassus, atau menjelek-jelekkan rekan kerja maupun lembaga, termasuk melalui keluarga atau pihak lain.</li>
+<li>Mengancam atau meneror rekan kerja maupun lembaga, secara lisan, tulisan, atau media sosial.</li>
+<li>Terlibat tindak kriminal, radikalisme, atau terorisme.</li>
+</ol>
+<h3 id="bab-6-d">D. Tata Tertib Kerja</h3>
+<ol>
+<li>Memeriksa peralatan kerja sebelum mulai dan sebelum meninggalkan pekerjaan.</li>
+<li>Menjaga ketertiban, kebersihan, dan keselamatan inventaris yang menjadi tanggung jawabnya.</li>
+<li>Memakai pakaian kerja dan alat pengaman yang disediakan bila pekerjaan mengharuskan.</li>
+<li>Segera melaporkan kepada atasan bila menemukan hal yang membahayakan santri, pegawai, atau Yayasan.</li>
+<li>Ikut menjaga lingkungan Ma'had dari bahaya kebakaran, banjir, dan longsor.</li>
+<li>Datang terlambat, meninggalkan tempat kerja, atau pulang lebih awal hanya dengan izin (Bab 9).</li>
+</ol>
+<h3 id="bab-6-e">E. Standar Penampilan</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Berlaku untuk</th>
+<th>Ketentuan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Semua pegawai</td>
+<td>Rapi dan bersih; kuku pendek; pakaian kerja resmi yang pantas sesuai sunah; seragam bila divisinya mewajibkan; ID Card selama di lingkungan kerja</td>
+</tr>
+<tr>
+<td>Pegawai ikhwan</td>
+<td>Rambut tidak melebihi kerah baju; memelihara janggut sesuai sunah; memakai songkok selama di lingkungan kerja</td>
+</tr>
+<tr>
+<td>Pegawai akhwat</td>
+<td>Pakaian syar'i yang menutup aurat, longgar, tidak transparan, tidak menyerupai laki-laki; jilbab menutup dada dengan warna dan model sopan; tanpa riasan berlebihan dan wewangian mencolok</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ketentuan rinci seragam diatur dengan keputusan Pimpinan FIWA.</p>
+
+</section>
+<section class="chapter" id="bab-7" aria-labelledby="bab-7-h"><header class="ch-head"><p class="eyebrow">Bab 7</p><h2 id="bab-7-h">Larangan</h2></header>
+
+<p>Pelanggaran bab ini dikenakan sanksi sesuai Bab 13. Kerugian yang timbul wajib diganti oleh pegawai.</p>
+<h3 id="bab-7-a">A. Milik Yayasan</h3>
+<ol>
+<li>Menyalahgunakan, memiliki, menjual, membeli, menggadaikan, menyewakan, atau meminjamkan data, fasilitas, barang, dokumen, atau surat berharga milik Yayasan.</li>
+<li>Membawa barang inventaris keluar lingkungan Yayasan tanpa izin tertulis penanggung jawab.</li>
+<li>Menggunakan inventaris, termasuk barang bekas pakai, untuk kepentingan selain Yayasan.</li>
+<li>Menggunakan fasilitas FIWA di luar jam kerja tanpa izin tertulis pengelola fasilitas.</li>
+</ol>
+<h3 id="bab-7-b">B. Lingkungan dan Keselamatan</h3>
+<ol>
+<li>Merokok di seluruh area Ma'had (dan di luar lingkungan kerja, sesuai Bab 6 bagian C).</li>
+<li>Membuang sampah sembarangan, membuang limbah, atau merusak lingkungan.</li>
+</ol>
+<h3 id="bab-7-c">C. Risywah, Gratifikasi, dan KKN</h3>
+<p>Berdasarkan SK Direktur YAFI No. 002/FIWA-SKD/Dir/i/X/2019 tentang Larangan Melakukan Risywah, berlaku di dalam maupun di luar Ma'had. <strong>Hadiah</strong> meliputi uang, barang, cashback, fasilitas, potongan harga, komisi, dan bentuk lainnya.</p>
+<p>Pegawai dilarang:</p>
+<ol>
+<li>Meminta atau menerima hadiah, langsung maupun tidak langsung, dari supplier dan kontraktor; orang tua atau wali santri dan santri; atau pihak mana pun yang berkepentingan dengan FIWA.</li>
+<li>Menerima komisi pribadi dari pembelian barang atau jasa.</li>
+<li>Memberi atau menerima risywah (suap) dalam bentuk apa pun.</li>
+<li>Melakukan korupsi, kolusi, dan nepotisme.</li>
+</ol>
+<p><strong>Bila ada yang ingin memberi hadiah:</strong></p>
+<ol>
+<li>Arahkan pemberian melalui Sekretariat. Hadiah tidak dapat dikhususkan untuk pegawai tertentu dan akan didistribusikan sekolah.</li>
+<li>Pemberian yang terlanjur diterima wajib diserahkan ke Sekretariat paling lambat <strong>3 hari kerja</strong>.</li>
+<li>Hal yang meragukan segera dikonsultasikan dengan manajemen FIWA.</li>
+</ol>
+<h3 id="bab-7-d">D. Kepentingan Pribadi dan Pekerjaan Lain</h3>
+<ol>
+<li>Bertransaksi bisnis terkait jabatan dengan santri, wali santri, supplier, atau mitra FIWA tanpa izin tertulis Mudir.</li>
+<li>Bekerja atau mengajar di lembaga pendidikan lain, termasuk bimbingan belajar dan pengajaran daring berbayar, tanpa izin tertulis Mudir.</li>
+<li>Memiliki atau mengelola lembaga pendidikan sejenis tanpa izin tertulis Mudir.</li>
+<li>Memberikan les privat berbayar kepada santri FIWA.</li>
+<li>Mengedarkan proposal, daftar sokongan, atau meminta sumbangan kepada siapa pun tanpa izin tertulis Mudir.</li>
+<li>Menyalahgunakan jabatan, wewenang, atau fasilitas untuk keuntungan pribadi.</li>
+</ol>
+<p>Pegawai yang mengikuti seleksi CPNS/PPPK atau melamar pekerjaan lain wajib memberi tahu HRD secara tertulis sebelum mendaftar, dan tetap terikat ketentuan pengunduran diri (Bab 14).</p>
+<h3 id="bab-7-e">E. Kejujuran Administrasi</h3>
+<ol>
+<li>Memberikan keterangan palsu atau memalsukan dokumen saat seleksi, dalam perjanjian kerja, maupun dalam pengajuan di FIAS.</li>
+<li>Mengisikan absen orang lain atau meminta orang lain mengisikan absen.</li>
+<li>Meminjamkan akun FIAS kepada orang lain.</li>
+</ol>
+<h3 id="bab-7-f">F. Lain-lain</h3>
+<ol>
+<li>Menerima tamu pribadi di ruang kelas atau asrama; tamu diterima di ruang yang telah ditentukan.</li>
+<li>Membuat atau menyebarkan aturan sendiri yang bertentangan dengan Peraturan Yayasan.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-8" aria-labelledby="bab-8-h"><header class="ch-head"><p class="eyebrow">Bab 8</p><h2 id="bab-8-h">Waktu Kerja, Lembur, dan Perjalanan Dinas</h2></header>
+
+<h3 id="bab-8-a">A. Jam Kerja</h3>
+<p>Waktu kerja normal paling lama <strong>40 jam seminggu</strong>, tidak termasuk istirahat 1 jam per hari.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kelompok</th>
+<th>Hari</th>
+<th>Jam kerja</th>
+<th>Jam bersih per minggu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenaga Kependidikan <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+<td>Senin, Selasa, Kamis, Jumat</td>
+<td>07.00–15.00 WIB (istirahat 12.00–13.00)</td>
+<td>28 jam</td>
+</tr>
+<tr>
+<td></td>
+<td>Rabu dan Sabtu</td>
+<td>07.00–12.00 WIB</td>
+<td>10 jam</td>
+</tr>
+<tr>
+<td>Tenaga Non-Kependidikan</td>
+<td>Senin–Jumat</td>
+<td>08.00–17.00 WIB (istirahat 12.00–13.00)</td>
+<td>40 jam</td>
+</tr>
+<tr>
+<td>Pegawai shift (keamanan, kebersihan, Musyrif, klinik, dan sejenisnya)</td>
+<td>Sesuai jadwal shift</td>
+<td>Sesuai jadwal shift</td>
+<td>Paling lama 40 jam</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Jadwal kerja masing-masing pegawai tercantum di menu <strong>Jadwal Saya</strong> pada FIAS dan menjadi acuan absensi.</li>
+<li>Jadwal shift, hari kerja khusus, dan libur pekanan ditetapkan atasan yang berwenang dengan sepengetahuan HRD.</li>
+<li>Tukar shift diajukan melalui menu <strong>Tukar Shift</strong> dan disetujui rekan pengganti, lalu koordinator.</li>
+<li>Pegawai wajib hadir pada jam efektif yang ditetapkan, termasuk kegiatan sekolah dan pesantren yang dijadwalkan.</li>
+</ol>
+<h3 id="bab-8-b">B. Lembur</h3>
+<p><strong>Pengertian.</strong> Lembur adalah pekerjaan di luar jam kerja normal atau pada hari libur yang <strong>diperintahkan atau disetujui lebih dahulu</strong> oleh atasan langsung. Bekerja di luar jam atas kemauan sendiri tidak dihitung lembur. Jenis kegiatan yang termasuk lembur ditetapkan dengan keputusan Mudir.</p>
+<p><strong>Langkah-langkah:</strong></p>
+<ol>
+<li>Atasan langsung memerintahkan atau menyetujui lembur sebelum dilaksanakan.</li>
+<li>Pegawai mencatat lembur di <strong>Ajukan &gt; Lembur</strong> paling lambat <strong>1 hari kerja</strong> sesudahnya.</li>
+<li>Lembur sah setelah disetujui atasan langsung dan HRD.</li>
+</ol>
+<p><strong>Batas:</strong> paling banyak 4 jam sehari dan 18 jam seminggu.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Jenis lembur</th>
+<th>Kompensasi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kegiatan sekolah dan pesantren</td>
+<td>Hari libur pengganti</td>
+</tr>
+<tr>
+<td>Tugas operasional</td>
+<td>Upah lembur</td>
+</tr>
+</tbody>
+</table></div>
+<p>Upah lembur per jam = 1/173 × upah sebulan.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Waktu lembur</th>
+<th>Tarif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hari kerja, jam pertama</td>
+<td>1,5 × upah per jam</td>
+</tr>
+<tr>
+<td>Hari kerja, jam kedua dan seterusnya</td>
+<td>2 × upah per jam</td>
+</tr>
+<tr>
+<td>Hari libur dan hari libur nasional</td>
+<td>Sesuai peraturan perundang-undangan</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pegawai grade E dan F (Head/Manager ke atas) tidak mendapat upah lembur karena sudah termasuk dalam tunjangan jabatan.</p>
+<p><strong>Honor kelebihan jam mengajar.</strong> Guru yang mengajar melebihi beban JP yang ditetapkan menerima honor tambahan per JP sesuai ketentuan tersendiri.</p>
+<h3 id="bab-8-c">C. Perjalanan Dinas</h3>
+<ol>
+<li>Perjalanan dinas adalah perjalanan ke luar kota, luar daerah, atau luar negeri untuk tugas, atas perintah atau persetujuan atasan, yang dituangkan dalam surat tugas.</li>
+<li>Ajukan <strong>Ajukan &gt; Dinas Luar / Tugas Lembaga</strong> sesuai tanggal perjalanan dengan melampirkan surat tugas.</li>
+<li>Hari dinas yang disetujui dihitung hadir penuh.</li>
+<li>Biaya dinas meliputi transportasi (bila tidak memakai kendaraan dinas atau pribadi), penginapan (bila tidak disediakan), dan konsumsi. Besarnya sesuai level jabatan dan keputusan Pimpinan FIWA.</li>
+<li>Untuk perjalanan yang biayanya ditanggung instansi lain, FIWA dapat memberi tambahan biaya secukupnya.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-9" aria-labelledby="bab-9-h"><header class="ch-head"><p class="eyebrow">Bab 9</p><h2 id="bab-9-h">Kehadiran dan Izin</h2></header>
+
+<h3 id="bab-9-a">A. Ringkasan: Apa yang Harus Saya Lakukan?</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Situasi</th>
+<th>Yang dilakukan</th>
+<th>Menu FIAS</th>
+<th>Batas waktu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lupa atau gagal absen</td>
+<td>Ajukan koreksi dengan jam yang benar</td>
+<td>Ajukan &gt; Koreksi Absen</td>
+<td>Sesuai batas di aplikasi</td>
+</tr>
+<tr>
+<td>Sakit</td>
+<td>Kabari atasan secepatnya, lampirkan surat dokter</td>
+<td>Ajukan &gt; Sakit</td>
+<td>Hari itu juga, sebelum jam masuk bila memungkinkan</td>
+</tr>
+<tr>
+<td>Akan terlambat, pulang cepat, atau keluar kantor</td>
+<td>Kabari atasan, ajukan izin</td>
+<td>Ajukan &gt; Izin Terlambat / Pulang Cepat / Keluar Kantor</td>
+<td>Sebelum kejadian bila memungkinkan</td>
+</tr>
+<tr>
+<td>Urusan pribadi atau keluarga</td>
+<td>Kabari atasan, ajukan izin</td>
+<td>Ajukan &gt; Izin Pribadi / Keluarga</td>
+<td>Paling lambat 1 hari sebelumnya</td>
+</tr>
+<tr>
+<td>Menikah, menikahkan anak, khitanan anak</td>
+<td>Ajukan cuti normatif</td>
+<td>Ajukan &gt; jenis cuti yang sesuai</td>
+<td>2 minggu sebelumnya</td>
+</tr>
+<tr>
+<td>Kematian keluarga, istri melahirkan</td>
+<td>Kabari atasan secepatnya</td>
+<td>Ajukan &gt; jenis cuti yang sesuai</td>
+<td>Hari pertama kembali bekerja</td>
+</tr>
+<tr>
+<td>Tugas dinas</td>
+<td>Lampirkan surat tugas</td>
+<td>Ajukan &gt; Dinas Luar / Tugas Lembaga</td>
+<td>Sesuai tanggal dinas</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pemberitahuan berjenjang.</strong> Setiap ketidakhadiran diberitahukan kepada Subject Leader/Koordinator Divisi, lalu Kepala Sekolah/Kepala Divisi. Bagi guru, kabar disampaikan paling lambat sebelum jam pelajaran pertama berakhir, disertai bahan ajar untuk guru pengganti. Pimpinan unit meminta izin kepada Mudir.</p>
+<h3 id="bab-9-b">B. Pencatatan Kehadiran</h3>
+<ol>
+<li>Catat sendiri kehadiran saat datang dan pulang melalui mesin sidik jari atau menu <strong>Beranda &amp; Absen</strong> di FIAS.</li>
+<li>Pegawai yang datang terlambat melapor kepada atasan sebelum mulai bekerja.</li>
+<li>Riwayat kehadiran dapat dilihat di menu <strong>Riwayat Kehadiran</strong>.</li>
+<li>HRD memeriksa data kehadiran dan memberi tahu atasan bila ada penyimpangan.</li>
+</ol>
+<h3 id="bab-9-c">C. Sakit</h3>
+<ol>
+<li>Ajukan <strong>Sakit</strong> dengan melampirkan foto surat keterangan dokter yang menyatakan perlu istirahat.</li>
+<li>Sakit dengan surat dokter tidak mengurangi cuti tahunan.</li>
+<li>Sakit tanpa surat dokter dianggap izin pribadi (bagian D).</li>
+<li>Sakit lama dan terus-menerus diatur di Bab 11 bagian F.</li>
+</ol>
+<h3 id="bab-9-d">D. Izin Pribadi</h3>
+<p>Izin pribadi diberikan atas pertimbangan atasan, <strong>mengurangi jatah cuti tahunan</strong>, dan tidak mendapat tunjangan kehadiran maupun transportasi untuk hari tersebut. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span> Bila cuti tahunan sudah habis, izin diberikan tanpa upah untuk hari tersebut.</p>
+<h3 id="bab-9-e">E. Cuti Normatif (Izin dengan Upah Penuh)</h3>
+<p>Tidak memotong cuti tahunan.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keperluan</th>
+<th>Lama izin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pernikahan pegawai</td>
+<td>3 hari kerja</td>
+</tr>
+<tr>
+<td>Pernikahan anak pegawai</td>
+<td>2 hari kerja</td>
+</tr>
+<tr>
+<td>Khitanan anak</td>
+<td>2 hari kerja</td>
+</tr>
+<tr>
+<td>Istri melahirkan atau keguguran</td>
+<td>2 hari kerja, dapat diperpanjang paling lama 3 hari kerja dengan persetujuan atasan</td>
+</tr>
+<tr>
+<td>Kematian suami/istri, orang tua/mertua, anak/menantu</td>
+<td>2 hari kerja</td>
+</tr>
+<tr>
+<td>Kematian anggota keluarga dalam satu rumah</td>
+<td>1 hari kerja</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bila keperluan berlangsung di luar kota, izin dapat ditambah waktu perjalanan tercepat.</p>
+<h3 id="bab-9-f">F. Izin Khusus dari Yayasan <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></h3>
+<p>Dengan upah penuh dan tanpa memotong cuti:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keperluan</th>
+<th>Lama izin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pernikahan saudara kandung</td>
+<td>1 hari kerja</td>
+</tr>
+<tr>
+<td>Kematian saudara kandung</td>
+<td>2 hari kerja</td>
+</tr>
+<tr>
+<td>Mengantar atau menjemput keluarga berangkat/pulang haji</td>
+<td>2 hari kerja</td>
+</tr>
+<tr>
+<td>Bencana alam atau keadaan darurat yang ditetapkan Yayasan</td>
+<td>Sesuai keputusan Yayasan</td>
+</tr>
+</tbody>
+</table></div>
+<p>Izin kuliah atau keperluan lain di luar ketentuan di atas dapat diberikan atas kebijakan Kepala Sekolah/Kepala Divisi dan tidak boleh mengganggu tugas.</p>
+<h3 id="bab-9-g">G. Keterlambatan (Pegawai Selain Guru)</h3>
+<p>Keterlambatan dicatat otomatis oleh FIAS berdasarkan jam masuk pada jadwal kerja. Izin terlambat yang disetujui mencegah pegawai dianggap mangkir, tetapi <strong>tidak menghapus potongan</strong>. Potongan dihitung dari tunjangan kehadiran hari terjadinya keterlambatan. Bagi guru berlaku Bab 11 bagian E.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Lama terlambat</th>
+<th>Batas kejadian</th>
+<th>Potongan tunjangan kehadiran hari itu</th>
+<th>Tindakan bertahap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–5 menit</td>
+<td>5 kali/bulan, 20 kali/tahun</td>
+<td>20%</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Lebih dari 5 menit s.d. 4 jam</td>
+<td>2 kali/bulan, 10 kali/tahun</td>
+<td>70%</td>
+<td>Ke-1 dan ke-2: teguran atasan; ke-3: Notice; ke-4: SP 1; ke-5: SP 2; ke-6: SP 3</td>
+</tr>
+<tr>
+<td>Lebih dari 4 jam s.d. 5 jam</td>
+<td>2 kali/bulan, 10 kali/tahun</td>
+<td>80%</td>
+<td>Ke-1: teguran atasan; ke-2: Notice; ke-3: SP 1; ke-4: SP 2; ke-5: SP 3</td>
+</tr>
+<tr>
+<td>Lebih dari 5 jam</td>
+<td>–</td>
+<td>100%</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ketentuan tabel:</p>
+<ol>
+<li>Urutan tindakan bertahap dihitung dalam 6 bulan berjalan. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li>Kejadian yang melewati batas bulanan diperlakukan satu tingkat lebih berat (misalnya terlambat 1–5 menit yang ke-6 dalam sebulan diperlakukan sebagai terlambat lebih dari 5 menit). <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li>Sisa batas kejadian dalam sebulan tidak dibawa ke bulan berikutnya.</li>
+</ol>
+<p><strong>Keterlambatan masuk kelas (tenaga kependidikan selain guru yang mengajar).</strong> <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span> Tunjangan kehadiran dibagi dua: 50% mengikuti ketepatan datang ke FIWA (tabel di atas), 50% mengikuti ketepatan masuk kelas, dengan potongan:</p>
+<div class="formula" role="math"><span class="f-lhs">Potongan</span><span class="f-eq">=</span><span class="f-frac"><span class="f-num">menit terlambat masuk kelas</span><span class="f-den">total menit JP terjadwal</span></span><span class="f-rest">× 50% × tunjangan kehadiran</span></div>
+<h3 id="bab-9-h">H. Mangkir</h3>
+<ol>
+<li>Tidak hadir tanpa izin yang disetujui di FIAS, atau tanpa memberi tahu atasan, dianggap mangkir.</li>
+<li>Akibatnya: jatah cuti tahunan dikurangi, tunjangan kehadiran dan transportasi hari itu tidak dibayar, dan dikenai sanksi sesuai Bab 13.</li>
+<li>Mangkir <strong>5 hari kerja berturut-turut</strong> dan telah dipanggil HRD 2 kali secara tertulis dianggap mengundurkan diri (Bab 14).</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-10" aria-labelledby="bab-10-h"><header class="ch-head"><p class="eyebrow">Bab 10</p><h2 id="bab-10-h">Cuti</h2></header>
+
+<h3 id="bab-10-a">A. Jenis Cuti</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Jenis</th>
+<th>Syarat</th>
+<th>Lama</th>
+<th>Upah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cuti tahunan</td>
+<td>Masa kerja 12 bulan berturut-turut</td>
+<td>12 hari kerja per periode</td>
+<td>Penuh</td>
+</tr>
+<tr>
+<td>Cuti normatif</td>
+<td>Keperluan penting tertentu</td>
+<td>1–3 hari kerja (Bab 9 bagian E)</td>
+<td>Penuh</td>
+</tr>
+<tr>
+<td>Cuti melahirkan</td>
+<td>Pegawai perempuan</td>
+<td>3 bulan, dapat diperpanjang 3 bulan</td>
+<td>Bagian D</td>
+</tr>
+<tr>
+<td>Cuti keguguran</td>
+<td>Pegawai perempuan, dengan surat dokter/bidan</td>
+<td>1,5 bulan atau sesuai surat dokter/bidan</td>
+<td>Penuh</td>
+</tr>
+<tr>
+<td>Cuti besar</td>
+<td>6 tahun berturut-turut sebagai pegawai tetap</td>
+<td>2 bulan</td>
+<td>Penuh</td>
+</tr>
+<tr>
+<td>Cuti di luar tanggungan (umrah, haji, studi)</td>
+<td>Persetujuan Pimpinan FIWA</td>
+<td>Sesuai persetujuan</td>
+<td>Tanpa gaji, tunjangan, dan fasilitas; tidak dihitung masa kerja</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-10-b">B. Cuti Tahunan</h3>
+<ol>
+<li><strong>Periode cuti</strong> 26 Juni s.d. 25 Juni tahun berikutnya. Jatah baru diberikan otomatis oleh FIAS setiap 26 Juni.</li>
+<li><strong>Jatah</strong> 12 hari kerja per periode. Pegawai yang genap 12 bulan bekerja di tengah periode mendapat jatah sebanding sisa bulan periode tersebut. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li><strong>Cuti bersama</strong> mengurangi jatah cuti tahunan:</li>
+</ol>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kelompok</th>
+<th>Cuti bersama</th>
+<th>Cuti yang dapat diambil sendiri</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenaga Kependidikan</td>
+<td>Libur semester dan libur Idul Fitri yang ditetapkan Yayasan</td>
+<td>5 hari kerja <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+</tr>
+<tr>
+<td>Tenaga Non-Kependidikan</td>
+<td>Libur Idul Fitri 5 hari kerja</td>
+<td>7 hari kerja</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bagi Tenaga Kependidikan, libur semester dan Idul Fitri menggantikan cuti tahunan; kelebihan hari libur tidak menjadi utang cuti dan tidak mengurangi hak lain.</p>
+<ol start="4">
+<li>Cuti diambil paling banyak <strong>2 hari berturut-turut</strong> dalam satu pengajuan.</li>
+<li>Cuti <strong>tidak dapat diambil</strong>:<ol>
+<li>Pada hari penting sekolah: PTC (Parent Teacher Conference), Curriculum Days, hari pertama masuk setelah liburan, dan hari lain yang ditetapkan Pimpinan FIWA. Tanggal ini tampil di FIAS dan pengajuan otomatis ditolak.</li>
+<li>Sehari sebelum atau sesudah libur panjang (menyambung libur).</li>
+</ol>
+</li>
+<li>Yayasan dapat menunda cuti paling lama 6 bulan; cuti yang ditunda Yayasan tidak hangus selama masa penundaan.</li>
+<li>Sisa cuti lainnya <strong>hangus otomatis pada 25 Juni</strong>.</li>
+<li>Pegawai yang sakit berkepanjangan lebih dari 3 bulan dalam satu periode tidak mendapat cuti tahunan periode itu.</li>
+<li>Divisi dengan sistem kerja khusus mengikuti aturan cuti divisinya.</li>
+</ol>
+<h3 id="bab-10-c">C. Cuti Besar</h3>
+<ol>
+<li>Diberikan kepada pegawai tetap setiap telah bekerja 6 tahun berturut-turut. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li>Lamanya 2 bulan, diambil pada tahun ketujuh dan kedelapan masing-masing 1 bulan; pada kedua tahun itu pegawai tidak mendapat cuti tahunan.</li>
+<li>Hanya dapat diambil di luar masa aktif KBM.</li>
+<li>Hak yang tidak diambil sampai akhir tahun kedelapan gugur. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+</ol>
+<h3 id="bab-10-d">D. Cuti Melahirkan</h3>
+<ol>
+<li>Paling singkat 3 bulan, dapat diatur sebelum dan sesudah melahirkan, dan dapat diperpanjang paling lama 3 bulan bila ada kondisi khusus dengan surat dokter.</li>
+<li>Tidak mengurangi cuti tahunan.</li>
+<li>Upah selama cuti: 100% untuk 4 bulan pertama, 75% untuk bulan kelima dan keenam, sesuai UU No. 4 Tahun 2024. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+<li>Ajukan di FIAS paling lambat <strong>1 bulan sebelum</strong> perkiraan lahir dengan surat dokter/bidan.</li>
+</ol>
+<h3 id="bab-10-e">E. Prosedur Pengajuan Cuti</h3>
+<ol>
+<li>Buka <strong>Ajukan</strong>, pilih jenis cuti, isi tanggal dan alasan. FIAS menampilkan sisa saldo dan memeriksa syarat (saldo, masa kerja, jatah hari, tanggal terlarang).</li>
+<li>Ajukan paling lambat <strong>2 minggu sebelumnya</strong> (cuti melahirkan 1 bulan).</li>
+<li>Pengajuan disetujui atasan langsung, lalu HRD.</li>
+<li>Setelah disetujui HRD, cuti boleh dilaksanakan dan saldo terpotong otomatis.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-11" aria-labelledby="bab-11-h"><header class="ch-head"><p class="eyebrow">Bab 11</p><h2 id="bab-11-h">Gaji dan Potongan</h2></header>
+
+<h3 id="bab-11-a">A. Penetapan dan Kenaikan Gaji</h3>
+<ol>
+<li>Sistem dan besaran gaji ditetapkan dengan keputusan Pimpinan FIWA bersama Yayasan.</li>
+<li>Penyesuaian gaji mempertimbangkan prestasi kerja, career pathway, jabatan, keahlian, masa kerja, dan kemampuan keuangan Yayasan.</li>
+<li>Kenaikan gaji ditinjau paling lambat sekali setahun dan dapat ditunda bila kemampuan Yayasan tidak memungkinkan.</li>
+<li>Pegawai yang dipromosikan, didemosi, atau dimutasi mendapat penyesuaian tunjangan sesuai jabatan barunya.</li>
+</ol>
+<h3 id="bab-11-b">B. Komponen Penghasilan</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Komponen</th>
+<th>Porsi</th>
+<th>Dipengaruhi kehadiran?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gaji Pokok</td>
+<td>50% THP Dasar</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Tunjangan Kehadiran</td>
+<td>30% THP Dasar</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td>Tunjangan Transportasi</td>
+<td>20% THP Dasar</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td>Tunjangan Tetap (bila ada)</td>
+<td>Sesuai keputusan Yayasan</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Tunjangan Jabatan</td>
+<td>Bagi pemegang jabatan struktural</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Tunjangan Keahlian/Fungsional</td>
+<td>Bagi keahlian yang dinilai baik oleh Pimpinan FIWA, antara lain hafidz 30 juz mutqin bersanad atau TOAFL/TOEFL minimal 550 <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span>; dievaluasi berkala</td>
+<td>Tidak</td>
+</tr>
+<tr>
+<td>Honor kelebihan JP</td>
+<td>Bagi guru yang mengajar melebihi beban JP</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Contoh.</strong> THP Dasar Rp4.000.000 = gaji pokok Rp2.000.000 + tunjangan kehadiran Rp1.200.000 + tunjangan transportasi Rp800.000. Tunjangan jabatan Rp500.000 dibayar di luar THP Dasar dan tidak dipotong karena ketidakhadiran.</p>
+<p>Tunjangan kehadiran dan transportasi dihitung HRD melalui FIAS, prorata terhadap hari kerja terjadwal dalam periode penggajian.</p>
+<h3 id="bab-11-c">C. Pembayaran Gaji</h3>
+<ol>
+<li>Periode perhitungan: <strong>tanggal 26 bulan sebelumnya s.d. tanggal 25 bulan berjalan</strong>.</li>
+<li>Gaji dibayar paling lambat <strong>tanggal terakhir bulan berjalan</strong>; bila jatuh pada hari libur, dibayar pada hari kerja sebelumnya.</li>
+<li>Gaji ditransfer ke rekening Bank Syariah Indonesia (BSI); pegawai tanpa rekening BSI mengikuti prosedur khusus bagian keuangan.</li>
+<li>Pegawai baru yang belum genap satu periode dibayar prorata:</li>
+</ol>
+<div class="formula" role="math"><span class="f-lhs">Gaji</span><span class="f-eq">=</span><span class="f-frac"><span class="f-num">THP Dasar</span><span class="f-den">hari kerja terjadwal dalam periode</span></span><span class="f-rest">× hari masuk kerja</span></div>
+<p>Contoh: Rp4.000.000 ÷ 21 hari × 10 hari masuk = Rp1.904.762.</p>
+<h3 id="bab-11-d">D. Dampak Ketidakhadiran (Pegawai Selain Guru)</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keadaan</th>
+<th>Tunjangan kehadiran</th>
+<th>Tunjangan transportasi</th>
+<th>Cuti tahunan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hadir tepat waktu</td>
+<td>Dibayar</td>
+<td>Dibayar</td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Hadir terlambat</td>
+<td>Dipotong (Bab 9 bagian G)</td>
+<td>Dibayar</td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Dinas luar yang disetujui</td>
+<td>Dibayar</td>
+<td>Dibayar</td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Cuti tahunan</td>
+<td>Dibayar</td>
+<td>Tidak dibayar</td>
+<td>Berkurang</td>
+</tr>
+<tr>
+<td>Cuti normatif dan izin khusus Yayasan</td>
+<td>Dibayar <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+<td>Tidak dibayar <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Sakit dengan surat dokter</td>
+<td>Dibayar</td>
+<td>Tidak dibayar</td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Sakit tanpa surat dokter / izin pribadi</td>
+<td>Tidak dibayar</td>
+<td>Tidak dibayar</td>
+<td>Berkurang</td>
+</tr>
+<tr>
+<td>Mangkir</td>
+<td>Tidak dibayar</td>
+<td>Tidak dibayar</td>
+<td>Berkurang, ditambah sanksi</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-11-e">E. Potongan bagi Guru</h3>
+<p>Bagi guru (Guru Umum dan Guru Diniyyah), potongan diambil dari porsi tunjangan kehadiran dan transportasi (50% THP Dasar). Ketentuan ini menggantikan bagian D dan Bab 9 bagian G.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kejadian</th>
+<th>Rumus potongan</th>
+<th>Contoh (THP Dasar Rp4.000.000)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terlambat hadir ke FIWA atau masuk kelas</td>
+<td>THP Dasar × 50% × 1/160 × jam terlambat</td>
+<td>Rp12.500 per jam</td>
+</tr>
+<tr>
+<td>Pulang lebih awal atau meninggalkan kantor</td>
+<td>THP Dasar × 50% × 1/160 × jumlah jam</td>
+<td>Rp12.500 per jam</td>
+</tr>
+<tr>
+<td>Izin syar'i, izin pribadi, atau sakit dengan surat dokter</td>
+<td>THP Dasar × 50% ÷ 24 × jumlah hari</td>
+<td>Rp83.333 per hari</td>
+</tr>
+<tr>
+<td>Mangkir</td>
+<td>THP Dasar × 50% ÷ 24 × jumlah hari, ditambah sanksi</td>
+<td>Rp83.333 per hari</td>
+</tr>
+<tr>
+<td>Cuti tahunan, cuti normatif, dinas yang disetujui</td>
+<td>Tidak dipotong</td>
+<td>Rp0</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Keterlambatan dan pulang lebih awal dihitung proporsional per menit dari jadwal kerja.</li>
+<li>Total potongan sebulan paling banyak sebesar 50% THP Dasar.</li>
+<li>Perhitungan dilakukan HRD melalui FIAS setiap periode penggajian.</li>
+</ol>
+<h3 id="bab-11-f">F. Gaji Selama Sakit Berkepanjangan</h3>
+<p>Pegawai yang sakit lama dan terus-menerus dengan surat dokter tetap menerima upah:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Masa sakit</th>
+<th>Upah yang dibayar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bulan ke-1 s.d. ke-4</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Bulan ke-5 s.d. ke-8</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Bulan ke-9 s.d. ke-12</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Bulan ke-13 dan seterusnya</td>
+<td>25%, sampai ada keputusan PHK</td>
+</tr>
+</tbody>
+</table></div>
+<p>Surat dokter diperbarui paling lambat setiap <strong>30 hari</strong>.</p>
+
+</section>
+<section class="chapter" id="bab-12" aria-labelledby="bab-12-h"><header class="ch-head"><p class="eyebrow">Bab 12</p><h2 id="bab-12-h">Kesejahteraan</h2></header>
+
+<h3 id="bab-12-a">A. Ringkasan Program</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Masa kerja minimal</th>
+<th>Untuk</th>
+<th>Rincian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BPJS Ketenagakerjaan</td>
+<td>1 bulan</td>
+<td>Semua pegawai</td>
+<td>Bagian B</td>
+</tr>
+<tr>
+<td>BPJS Kesehatan</td>
+<td>3 bulan <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+<td>Semua pegawai</td>
+<td>Bagian B</td>
+</tr>
+<tr>
+<td>Tunjangan Hari Raya (THR)</td>
+<td>1 bulan</td>
+<td>Semua pegawai</td>
+<td>Bagian C</td>
+</tr>
+<tr>
+<td>Makan siang</td>
+<td>–</td>
+<td>Semua pegawai, pada hari kerja</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Uang duka</td>
+<td>3 bulan</td>
+<td>Semua pegawai</td>
+<td>Bagian D</td>
+</tr>
+<tr>
+<td>Hadiah pernikahan</td>
+<td>12 bulan berturut-turut</td>
+<td>Semua pegawai</td>
+<td>Bagian E</td>
+</tr>
+<tr>
+<td>Hadiah kelahiran</td>
+<td>12 bulan berturut-turut</td>
+<td>Semua pegawai</td>
+<td>Bagian E</td>
+</tr>
+<tr>
+<td>Pinjaman</td>
+<td>12 bulan berturut-turut</td>
+<td>Semua pegawai</td>
+<td>Bagian F</td>
+</tr>
+<tr>
+<td>Tunjangan kontrakan</td>
+<td>12 bulan</td>
+<td>Guru Diniyyah</td>
+<td>Besarnya ditetapkan Pimpinan FIWA</td>
+</tr>
+<tr>
+<td>Kesempatan umrah</td>
+<td>12 bulan</td>
+<td>Semua pegawai</td>
+<td>Syarat ditetapkan Pimpinan FIWA</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-12-b">B. BPJS</h3>
+<p><strong>BPJS Kesehatan</strong></p>
+<ol>
+<li>Dasar iuran: upah bulanan, paling rendah UMK Kabupaten Bogor tahun berjalan.</li>
+<li>Iuran 5%: Yayasan 4%, pegawai 1%. Contoh dengan UMK 2026 Rp5.161.769: Yayasan Rp206.471, pegawai Rp51.618.</li>
+<li>Mencakup 5 orang: pegawai, suami/istri, dan 3 anak.</li>
+<li>FIWA membayar di awal bulan; bagian pegawai dipotong dari gaji akhir bulan.</li>
+</ol>
+<p><strong>BPJS Ketenagakerjaan</strong> (dasar: upah)</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Yayasan</th>
+<th>Pegawai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jaminan Kecelakaan Kerja (JKK)</td>
+<td>0,24%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Jaminan Kematian (JKM)</td>
+<td>0,30%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Jaminan Hari Tua (JHT)</td>
+<td>3,70%</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>Jaminan Pensiun (JP), bila diwajibkan</td>
+<td>2%</td>
+<td>1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Saldo JHT menjadi milik pegawai.</p>
+<h3 id="bab-12-c">C. Tunjangan Hari Raya (THR)</h3>
+<ol>
+<li>Untuk pegawai tetap maupun kontrak yang telah bekerja minimal 1 bulan terus-menerus pada tanggal Idul Fitri.</li>
+<li>Masa kerja 12 bulan atau lebih: 1 bulan upah. Kurang dari 12 bulan: masa kerja (bulan) ÷ 12 × 1 bulan upah.</li>
+<li>Pegawai tetap yang berhenti paling lama 30 hari sebelum Hari Raya tetap berhak; pegawai kontrak yang kontraknya berakhir sebelum Hari Raya tidak berhak.</li>
+<li>Dibayar paling lambat <strong>7 hari sebelum</strong> Hari Raya.</li>
+</ol>
+<h3 id="bab-12-d">D. Uang Duka</h3>
+<ol>
+<li><strong>Pegawai meninggal dunia</strong> bukan karena kecelakaan kerja: ahli waris menerima gaji bulan berjalan dan uang duka, di samping pesangon dan uang penghargaan masa kerja sesuai peraturan.</li>
+<li><strong>Keluarga pegawai meninggal dunia</strong> (suami/istri, anak, atau orang tua kandung): pegawai menerima uang duka.</li>
+<li>Besarnya ditetapkan dengan keputusan Pimpinan FIWA.</li>
+</ol>
+<h3 id="bab-12-e">E. Hadiah Pernikahan dan Kelahiran</h3>
+<p>Serahkan salinan akta nikah atau surat keterangan lahir ke HRD. Besarnya sesuai level jabatan dan keputusan Pimpinan FIWA.</p>
+<h3 id="bab-12-f">F. Pinjaman</h3>
+<p>Yayasan pada dasarnya tidak menyediakan pinjaman, tetapi dalam kondisi tertentu pegawai dapat mengajukan kepada Pimpinan FIWA.</p>
+<p><strong>Syarat:</strong> masa kerja minimal 12 bulan berturut-turut; paling banyak 1 kali gaji total; lunas paling lambat 1 tahun; pinjaman sebelumnya sudah lunas.</p>
+<p><strong>Prosedur:</strong></p>
+<ol>
+<li>Isi formulir pinjaman dan minta tanda tangan atasan langsung dan HRD.</li>
+<li>HRD meneruskan ke Pimpinan FIWA.</li>
+<li>Pimpinan FIWA menyetujui atau menolak sesuai kondisi keuangan.</li>
+<li>Cicilan dipotong dari gaji sesuai kesepakatan tertulis.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-13" aria-labelledby="bab-13-h"><header class="ch-head"><p class="eyebrow">Bab 13</p><h2 id="bab-13-h">Pelanggaran dan Sanksi</h2></header>
+
+<p>Sanksi adalah tindakan korektif dan pembinaan, bukan hukuman semata. Sanksi ditentukan dengan menimbang jenis pelanggaran, seberapa sering diulang, unsur kesengajaan, dan akibatnya. Pelanggaran yang menimbulkan kerugian wajib diganti selain dikenai sanksi.</p>
+<h3 id="bab-13-a">A. Tingkatan Sanksi</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Tingkat</th>
+<th>Diberikan oleh</th>
+<th>Masa berlaku</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teguran lisan dan pembinaan</td>
+<td>Atasan langsung</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Notice</td>
+<td>Atasan langsung, disetujui Kepala Sekolah/Kepala Divisi, dicatat HRD</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Surat Peringatan (SP) 1, 2, 3</td>
+<td>Atasan langsung (minimal manajer) bersama HRD, disetujui Pimpinan FIWA</td>
+<td>6 bulan</td>
+</tr>
+<tr>
+<td>Pemutusan hubungan kerja</td>
+<td>Mudir; untuk pegawai pimpinan, Pimpinan FIWA bersama Yayasan</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div>
+<p>Semua teguran, Notice, dan SP dicatat di menu <strong>Pembinaan</strong> FIAS dan dapat dilihat pegawai.</p>
+<h3 id="bab-13-b">B. Klasifikasi Pelanggaran</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Tingkat</th>
+<th>Contoh pelanggaran</th>
+<th>Sanksi awal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ringan</td>
+<td>Tidak absen; terlambat atau pulang cepat tanpa izin; tidak menghadiri rapat, pembinaan, atau kegiatan wajib; tidak memakai seragam/ID Card; menerima tamu di ruang kelas</td>
+<td>Teguran lisan</td>
+</tr>
+<tr>
+<td>Ringan berulang</td>
+<td>Pelanggaran ringan yang sama 3 kali dalam 6 bulan</td>
+<td>Notice</td>
+</tr>
+<tr>
+<td>Sedang</td>
+<td>Mangkir 1–2 hari dalam sebulan; alasan izin yang terbukti tidak benar; sering meninggalkan tugas untuk kepentingan pribadi; tidak mematuhi arahan atasan yang wajar; mengedarkan proposal tanpa izin; tidak menyerahkan hadiah ke Sekretariat</td>
+<td>SP 1</td>
+</tr>
+<tr>
+<td>Berat</td>
+<td>Mangkir 3 hari atau lebih dalam sebulan; menolak perintah kerja yang layak 3 kali; titip absen; meminjamkan akun FIAS; ghibah, fitnah, atau teror terhadap rekan dan lembaga; bekerja di lembaga sejenis tanpa izin; mengulang pelanggaran sedang saat SP berlaku</td>
+<td>SP 2 atau SP 3</td>
+</tr>
+<tr>
+<td>Sangat berat</td>
+<td>Kesalahan berat pada Bab 14 bagian E; keterangan atau dokumen palsu; zina, mabuk, atau narkoba di dalam maupun di luar lingkungan kerja; kekerasan terhadap santri; menyalahgunakan jabatan; sengaja menghilangkan atau merusak milik Yayasan</td>
+<td>Pemutusan hubungan kerja</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-13-c">C. Ketentuan Surat Peringatan</h3>
+<ol>
+<li>SP tidak harus berurutan; tingkatnya disesuaikan dengan berat ringannya pelanggaran.</li>
+<li>SP berlaku 6 bulan sejak diterbitkan. Masa ini menjadi kesempatan pegawai memperbaiki diri dan bagi atasan menilai kinerjanya.</li>
+<li>Pelanggaran setelah SP habis berlaku dinilai sebagai pelanggaran baru.</li>
+<li>Pelanggaran saat SP 3 masih berlaku dapat berujung pemutusan hubungan kerja.</li>
+</ol>
+<h3 id="bab-13-d">D. Bentuk Sanksi Lain</h3>
+<p>Sesuai bobot pelanggaran, Yayasan dapat juga menjatuhkan: penundaan hak (misalnya kenaikan gaji), penurunan jabatan atau grade, kewajiban mengganti kerugian, pemberhentian dengan hormat, atau pemberhentian tidak dengan hormat.</p>
+
+</section>
+<section class="chapter" id="bab-14" aria-labelledby="bab-14-h"><header class="ch-head"><p class="eyebrow">Bab 14</p><h2 id="bab-14-h">Berakhirnya Hubungan Kerja</h2></header>
+
+<p>Yayasan berusaha sedapat mungkin mencegah pemutusan hubungan kerja (PHK). Bila terpaksa terjadi, PHK dilaksanakan sesuai peraturan perundang-undangan.</p>
+<h3 id="bab-14-a">A. Penyebab</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Penyebab</th>
+<th>Rincian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mengundurkan diri</td>
+<td>Bagian B</td>
+</tr>
+<tr>
+<td>Tidak lulus masa percobaan</td>
+<td>Dapat diakhiri sewaktu-waktu tanpa pesangon (Bab 4)</td>
+</tr>
+<tr>
+<td>Berakhirnya perjanjian kerja</td>
+<td>Bagi pegawai kontrak yang tidak diperpanjang</td>
+</tr>
+<tr>
+<td>Kinerja tidak mencapai standar</td>
+<td>Setelah pembinaan dan surat peringatan</td>
+</tr>
+<tr>
+<td>Sakit berkepanjangan</td>
+<td>Bagian C</td>
+</tr>
+<tr>
+<td>Mangkir</td>
+<td>Bagian D</td>
+</tr>
+<tr>
+<td>Kesalahan berat</td>
+<td>Bagian E</td>
+</tr>
+<tr>
+<td>Usia pensiun</td>
+<td>60 tahun; dapat diperpanjang dengan perjanjian kerja waktu tertentu sesuai kebutuhan</td>
+</tr>
+<tr>
+<td>Meninggal dunia</td>
+<td>Hak ahli waris sesuai Bab 12 bagian D</td>
+</tr>
+<tr>
+<td>Perampingan, peleburan organisasi, atau keadaan darurat</td>
+<td>Dengan pesangon sesuai peraturan dan kemampuan Yayasan</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-14-b">B. Mengundurkan Diri</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kelompok</th>
+<th>Surat pengunduran diri paling lambat</th>
+<th>Tanggal efektif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenaga Kependidikan</td>
+<td>6 bulan sebelumnya</td>
+<td>Akhir tahun ajaran; tidak saat KBM berlangsung</td>
+</tr>
+<tr>
+<td>Tenaga Non-Kependidikan</td>
+<td>3 bulan sebelumnya</td>
+<td>Sesuai surat yang disetujui</td>
+</tr>
+</tbody>
+</table></div>
+<ol>
+<li>Surat ditujukan kepada Kepala HRD dengan persetujuan atasan langsung (minimal setingkat manajer).</li>
+<li><strong>Bila tidak sesuai prosedur</strong>, Yayasan berhak tidak memberikan gaji bulan berjalan, surat keterangan kerja, dan THR. Tenaga kependidikan yang sudah menandatangani komitmen mengajar tahun ajaran baru atau perjanjian pengabdian dikenai sanksi sesuai perjanjian tersebut.</li>
+<li><strong>Sebelum tanggal efektif</strong>, pegawai wajib menyerahkan semua barang dan dokumen milik Yayasan; melakukan serah terima, hand over, dan transfer knowledge; menyelesaikan utang; dan tetap bekerja seperti biasa.</li>
+<li>Pegawai tetap yang mengundurkan diri sesuai prosedur setelah bekerja lebih dari 10 tahun dengan penilaian baik dapat menerima uang pisah sesuai kemampuan Yayasan. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></li>
+</ol>
+<h3 id="bab-14-c">C. Sakit Berkepanjangan</h3>
+<p>PHK dapat dilakukan setelah lebih dari 12 bulan bagi pegawai yang menurut keterangan dokter tidak sehat jasmani dan/atau rohani untuk melanjutkan pekerjaan, atau cacat akibat kecelakaan kerja sehingga tidak dapat bekerja. Upah selama sakit mengikuti Bab 11 bagian F.</p>
+<h3 id="bab-14-d">D. Mangkir</h3>
+<p>Pegawai dinyatakan mengundurkan diri bila memenuhi <strong>seluruh</strong> syarat: tidak masuk 5 hari kerja berturut-turut tanpa izin; tidak dapat memberi keterangan sah yang diterima atasan; dan telah dipanggil HRD 2 kali secara patut dan tertulis.</p>
+<h3 id="bab-14-e">E. Kesalahan Berat</h3>
+<ol>
+<li>Penipuan, pencurian, atau penggelapan barang dan/atau uang milik Yayasan.</li>
+<li>Mabuk, minum minuman keras, memakai dan/atau mengedarkan narkotika, psikotropika, dan zat adiktif lainnya.</li>
+<li>Perbuatan asusila atau perjudian.</li>
+<li>Kekerasan fisik, psikis, atau seksual terhadap santri.</li>
+<li>Menyerang, menganiaya, mengancam, atau mengintimidasi rekan kerja atau atasan.</li>
+<li>Dengan ceroboh atau sengaja membiarkan rekan kerja atau santri dalam bahaya.</li>
+<li>Membujuk rekan kerja melanggar hukum atau kesusilaan.</li>
+<li>Dengan ceroboh atau sengaja merusak milik Yayasan sehingga menimbulkan kerugian.</li>
+<li>Membocorkan rahasia yang seharusnya dirahasiakan, kecuali untuk kepentingan negara.</li>
+<li>Perbuatan lain yang diancam pidana penjara 5 tahun atau lebih.</li>
+<li>Risywah, gratifikasi yang memengaruhi keputusan, atau korupsi, kolusi, dan nepotisme.</li>
+<li>Memberikan keterangan atau dokumen palsu saat seleksi atau dalam perjanjian kerja.</li>
+</ol>
+<p>Kesalahan berat dibuktikan dengan salah satu dari: tertangkap tangan; pengakuan pegawai; atau laporan pihak berwenang yang didukung sekurang-kurangnya 2 orang saksi.</p>
+<h3 id="bab-14-f">F. Hak dan Kewajiban saat PHK</h3>
+<ol>
+<li>Pegawai tetap menerima uang pesangon dan/atau uang penghargaan masa kerja sesuai ketentuan pemerintah dan kemampuan Yayasan, kecuali PHK karena masa percobaan.</li>
+<li>Utang pegawai kepada Yayasan yang memiliki bukti sah diperhitungkan dari hak yang diterima saat PHK berdasarkan kesepakatan tertulis. Bila tidak mencukupi, PHK tidak menghapus kewajiban melunasi sisanya.</li>
+</ol>
+
+</section>
+<section class="chapter" id="bab-15" aria-labelledby="bab-15-h"><header class="ch-head"><p class="eyebrow">Bab 15</p><h2 id="bab-15-h">Penutup</h2></header>
+
+<ol>
+<li>Buku Pedoman Pegawai FIWA 2026 ini dibagikan kepada semua pegawai dan menggantikan Buku Pedoman Pegawai versi Agustus 2019.</li>
+<li>Setiap pegawai menandatangani Surat Pernyataan Kesanggupan (Lampiran 4) setelah menerima buku ini.</li>
+<li>Pimpinan FIWA dapat mengubah, menambah, atau mengurangi ketentuan secara berkala, dengan memperhatikan aspirasi pegawai, kondisi Yayasan, dan peraturan perundang-undangan.</li>
+<li>Hal yang belum diatur ditetapkan dengan keputusan Pimpinan FIWA.</li>
+<li>Perselisihan kepegawaian diselesaikan lebih dahulu secara musyawarah di lingkungan FIWA, dengan memperhatikan peraturan perundang-undangan.</li>
+<li>Bila ada ketentuan yang bertentangan dengan peraturan perundang-undangan, yang berlaku adalah peraturan perundang-undangan.</li>
+<li>Buku ini berlaku sejak tanggal ditetapkan.</li>
+</ol>
+<p>Ditetapkan di: Ciseeng, Kabupaten Bogor Pada tanggal: ........ 2026</p>
+<p>Mudir Fitrah Islamic World Academy <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></p>
+<p><strong>Ust. Johansyah, ST.</strong></p>
+
+</section>
+<section class="chapter" id="lampiran-1" aria-labelledby="lampiran-1-h"><header class="ch-head"><p class="eyebrow">Lampiran 1</p><h2 id="lampiran-1-h">Layanan FIAS</h2></header>
+
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keperluan</th>
+<th>Menu di aplikasi</th>
+<th>Persetujuan</th>
+<th>Bab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absen datang dan pulang</td>
+<td>Beranda &amp; Absen, atau mesin sidik jari</td>
+<td>–</td>
+<td><a href="#bab-9-b">9B</a></td>
+</tr>
+<tr>
+<td>Lupa atau gagal absen</td>
+<td>Ajukan &gt; Koreksi Absen</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-9-b">9B</a></td>
+</tr>
+<tr>
+<td>Sakit</td>
+<td>Ajukan &gt; Sakit</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-9-c">9C</a></td>
+</tr>
+<tr>
+<td>Izin pribadi atau keluarga</td>
+<td>Ajukan &gt; Izin Pribadi / Keluarga</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-9-d">9D</a></td>
+</tr>
+<tr>
+<td>Terlambat, pulang cepat, keluar kantor</td>
+<td>Ajukan &gt; Izin Terlambat / Izin Pulang Cepat / Izin Keluar Kantor</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-9-g">9G</a></td>
+</tr>
+<tr>
+<td>Cuti tahunan, normatif, khusus</td>
+<td>Ajukan &gt; jenis cuti yang sesuai</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-10-e">10E</a></td>
+</tr>
+<tr>
+<td>Perjalanan dinas</td>
+<td>Ajukan &gt; Dinas Luar / Tugas Lembaga</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-8-c">8C</a></td>
+</tr>
+<tr>
+<td>Lembur</td>
+<td>Ajukan &gt; Lembur</td>
+<td>Atasan langsung, lalu HRD</td>
+<td><a href="#bab-8-b">8B</a></td>
+</tr>
+<tr>
+<td>Tukar shift</td>
+<td>Tukar Shift</td>
+<td>Rekan pengganti, lalu koordinator</td>
+<td><a href="#bab-8-a">8A</a></td>
+</tr>
+<tr>
+<td>Status pengajuan</td>
+<td>Pengajuan Saya</td>
+<td>–</td>
+<td><a href="#bab-3-c">3C</a></td>
+</tr>
+<tr>
+<td>Jadwal kerja</td>
+<td>Jadwal Saya</td>
+<td>–</td>
+<td><a href="#bab-8-a">8A</a></td>
+</tr>
+<tr>
+<td>Riwayat kehadiran</td>
+<td>Riwayat Kehadiran</td>
+<td>–</td>
+<td><a href="#bab-9-b">9B</a></td>
+</tr>
+<tr>
+<td>Teguran, Notice, SP</td>
+<td>Pembinaan</td>
+<td>–</td>
+<td><a href="#bab-13-a">13A</a></td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="lampiran-2" aria-labelledby="lampiran-2-h"><header class="ch-head"><p class="eyebrow">Lampiran 2</p><h2 id="lampiran-2-h">Tenggat Waktu Penting</h2></header>
+
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keperluan</th>
+<th>Batas waktu</th>
+<th>Bab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kabar tidak masuk (guru)</td>
+<td>Sebelum jam pelajaran pertama berakhir</td>
+<td><a href="#bab-9-a">9A</a></td>
+</tr>
+<tr>
+<td>Izin pribadi</td>
+<td>1 hari sebelumnya</td>
+<td><a href="#bab-9-a">9A</a></td>
+</tr>
+<tr>
+<td>Cuti tahunan, cuti pernikahan, khitanan</td>
+<td>2 minggu sebelumnya</td>
+<td><a href="#bab-9-e">9E</a>, <a href="#bab-10-e">10E</a></td>
+</tr>
+<tr>
+<td>Cuti melahirkan</td>
+<td>1 bulan sebelum perkiraan lahir</td>
+<td><a href="#bab-10-d">10D</a></td>
+</tr>
+<tr>
+<td>Izin kematian keluarga atau istri melahirkan</td>
+<td>Hari pertama kembali bekerja</td>
+<td><a href="#bab-9-a">9A</a></td>
+</tr>
+<tr>
+<td>Pencatatan lembur</td>
+<td>1 hari kerja setelah lembur</td>
+<td><a href="#bab-8-b">8B</a></td>
+</tr>
+<tr>
+<td>Penyerahan hadiah yang terlanjur diterima</td>
+<td>3 hari kerja</td>
+<td><a href="#bab-7-c">7C</a></td>
+</tr>
+<tr>
+<td>Pembaruan surat dokter saat sakit panjang</td>
+<td>Setiap 30 hari</td>
+<td><a href="#bab-11-f">11F</a></td>
+</tr>
+<tr>
+<td>Surat pengunduran diri</td>
+<td>6 bulan (kependidikan) / 3 bulan (non-kependidikan)</td>
+<td><a href="#bab-14-b">14B</a></td>
+</tr>
+<tr>
+<td>Pembayaran gaji</td>
+<td>Tanggal terakhir bulan berjalan</td>
+<td><a href="#bab-11-c">11C</a></td>
+</tr>
+<tr>
+<td>Pembayaran THR</td>
+<td>7 hari sebelum Idul Fitri</td>
+<td><a href="#bab-12-c">12C</a></td>
+</tr>
+<tr>
+<td>Jatah cuti baru / sisa cuti hangus</td>
+<td>26 Juni / 25 Juni</td>
+<td><a href="#bab-10-b">10B</a></td>
+</tr>
+<tr>
+<td>Masa berlaku SP</td>
+<td>6 bulan</td>
+<td><a href="#bab-13-c">13C</a></td>
+</tr>
+<tr>
+<td>Masa percobaan / orientasi jabatan</td>
+<td>3 bulan / 3–6 bulan</td>
+<td><a href="#bab-4-c">4C</a>, <a href="#bab-4-f">4F</a></td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="lampiran-3" aria-labelledby="lampiran-3-h"><header class="ch-head"><p class="eyebrow">Lampiran 3</p><h2 id="lampiran-3-h">Uraian Tugas Pokok Jabatan</h2></header>
+
+<p>Rincian tugas tiap jabatan ditetapkan dalam SOP dan SK penugasan.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Jabatan</th>
+<th>Tugas pokok</th>
+<th>Melapor kepada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mudir</td>
+<td>Memimpin FIWA sesuai visi dan misi; membina Kepala Sekolah SMP dan SMA; meratifikasi dokumen resmi lembaga</td>
+<td>Yayasan</td>
+</tr>
+<tr>
+<td>SHD</td>
+<td>Menelaah konten keagamaan sebelum diajarkan; menetapkan kitab rujukan per jenjang; membina program diniyah dan pengasuhan</td>
+<td>Mudir</td>
+</tr>
+<tr>
+<td>Kepala Sekolah</td>
+<td>Memimpin unit; melaksanakan kurikulum dan peraturan; membina guru dan tenaga kependidikan; memelihara sarana; menyusun RAPBS; menjalankan reward dan sanksi; melapor perkembangan santri dan unit setiap bulan serta keuangan setiap tahun</td>
+<td>Mudir</td>
+</tr>
+<tr>
+<td>Wakil Kepala Sekolah</td>
+<td>Mendampingi Kepala Sekolah; menerima pendelegasian tugas edukasi; menggantikan saat Kepala Sekolah berhalangan; membuat laporan berkala</td>
+<td>Kepala Sekolah</td>
+</tr>
+<tr>
+<td>Guru</td>
+<td>Merencanakan dan melaksanakan pembelajaran; menyiapkan perangkat ajar; menilai dan mengoreksi; menyusun rapor; mengikuti pelatihan; meningkatkan prestasi santri; menerima tugas edukasi dan berhak menolak tugas yang bertentangan dengan aturan</td>
+<td>Kepala Sekolah</td>
+</tr>
+<tr>
+<td>Wali Kelas</td>
+<td>Mewakili Kepala Sekolah dan orang tua di kelas; menjalankan tugas yang ditetapkan Kepala Sekolah</td>
+<td>Kepala Sekolah</td>
+</tr>
+<tr>
+<td>Musyrif</td>
+<td>Mengasuh santri di unit asrama; menjaga ritme ibadah, belajar, dan istirahat santri</td>
+<td>Koordinator Pengasuhan <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+</tr>
+<tr>
+<td>PDC</td>
+<td>Mendampingi perkembangan pribadi dan afektif santri, termasuk pada Masa Adaptasi Santri (MAS)</td>
+<td>Kepala Sekolah <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">†</span></td>
+</tr>
+<tr>
+<td>Guru BK</td>
+<td>Menyusun dan menjalankan program bimbingan konseling; menangani masalah santri dengan kasih sayang dan adil; membuat laporan dan statistik</td>
+<td>Kepala Sekolah</td>
+</tr>
+<tr>
+<td>Tata Usaha</td>
+<td>Administrasi sekolah, kearsipan, jurnal kegiatan, laporan berkala</td>
+<td>Kepala Sekolah</td>
+</tr>
+<tr>
+<td>Tenaga Non-Kependidikan lain</td>
+<td>Sesuai pembagian kerja divisi (keamanan, kebersihan, teknisi, pengemudi, klinik, dan lainnya)</td>
+<td>Kepala Divisi</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="chapter" id="lampiran-4" aria-labelledby="lampiran-4-h"><header class="ch-head"><p class="eyebrow">Lampiran 4</p><h2 id="lampiran-4-h">Surat Pernyataan Kesanggupan</h2></header>
+
+<p>Saya yang bertanda tangan di bawah ini:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nama</td>
+<td>............................................</td>
+</tr>
+<tr>
+<td>Jabatan / Unit</td>
+<td>............................................</td>
+</tr>
+<tr>
+<td>Nomor Induk Pegawai</td>
+<td>............................................</td>
+</tr>
+</tbody>
+</table></div>
+<p>menyatakan bahwa saya telah menerima, membaca, dan memahami Buku Pedoman Pegawai FIWA 2026, dan dengan ini menyatakan sanggup menaati seluruh ketentuan di dalamnya serta peraturan lain yang berlaku di lingkungan Fitrah Islamic World Academy. Bila saya melanggar, saya bersedia menerima sanksi sesuai ketentuan yang berlaku.</p>
+<p>Ciseeng, ........................ 20....</p>
+<p>Yang menyatakan,</p>
+<p>(.......................................)</p>
+</section>
+  </main>
+</div>
+
+<footer class="foot"><div class="foot-in gutter">
+  <p>Buku Pedoman Pegawai FIWA 2026 · Draf · Yayasan Ashabul Fitrah Indonesia</p>
+  <p>Jl. H. Miing No. 67, Desa Karihkil, Ciseeng, Kabupaten Bogor 16120 · info@fiwa.sch.id</p>
+</div></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<button type="button" class="top-btn" id="topBtn" aria-label="Kembali ke atas" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* tables: key-value tables (2 cols) stay as tables; wider ones stack into cards on phones */
+  $$('.tbl').forEach(function (box) {
+    var t = box.querySelector('table');
+    var heads = $$('thead th', t).map(function (th) { return th.textContent.trim(); });
+    if (heads.every(function (h) { return h === ''; })) { box.classList.add('kv'); return; }
+    if (heads.length >= 3) {
+      box.classList.add('stack');
+      $$('tbody tr', t).forEach(function (tr) {
+        $$('td', tr).forEach(function (td, i) { td.setAttribute('data-label', heads[i] || ''); });
+      });
+    }
+  });
+
+  /* text size */
+  var sizes = [0.9, 1, 1.1, 1.22], si = 1;
+  try { var s = parseInt(localStorage.getItem('fiwa-fs'), 10); if (s >= 0 && s < sizes.length) si = s; } catch (e) {}
+  function applySize() { document.documentElement.style.setProperty('--fs', sizes[si] + 'rem'); try { localStorage.setItem('fiwa-fs', si); } catch (e) {} }
+  applySize();
+  $('#fsDown').addEventListener('click', function () { if (si > 0) { si--; applySize(); } });
+  $('#fsUp').addEventListener('click', function () { if (si < sizes.length - 1) { si++; applySize(); } });
+
+  /* drawer */
+  var toc = $('#toc'), scrim = $('#scrim'), menuBtn = $('#menuBtn');
+  function openToc() { toc.classList.add('open'); scrim.hidden = false; menuBtn.setAttribute('aria-expanded', 'true'); var a = toc.querySelector('.toc-ch.on > a') || toc.querySelector('a'); if (a) a.focus({ preventScroll: true }); }
+  function closeToc() { toc.classList.remove('open'); scrim.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', openToc);
+  $('#closeToc').addEventListener('click', closeToc);
+  scrim.addEventListener('click', closeToc);
+  toc.addEventListener('click', function (e) { if (e.target.closest('a')) closeToc(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeToc(); hideResults(); } });
+
+  /* active chapter + progress + back to top */
+  var chapters = $$('.chapter');
+  var tocItems = {}; $$('.toc-ch').forEach(function (li) { tocItems[li.dataset.id] = li; });
+  var subLinks = {}; $$('.toc-sub a').forEach(function (a) { subLinks[a.getAttribute('href').slice(1)] = a; });
+  var h3s = $$('.chapter h3[id]');
+  var progress = $('#progress'), topBtn = $('#topBtn');
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      var y = window.scrollY, line = y + 120;
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? Math.min(100, y / max * 100) : 0) + '%';
+      topBtn.hidden = y < 800;
+      var cur = chapters[0];
+      for (var i = 0; i < chapters.length; i++) { if (chapters[i].offsetTop <= line) cur = chapters[i]; }
+      $$('.toc-ch.on').forEach(function (li) { if (li.dataset.id !== cur.id) li.classList.remove('on'); });
+      if (tocItems[cur.id]) tocItems[cur.id].classList.add('on');
+      var curSub = null;
+      for (var j = 0; j < h3s.length; j++) { var h = h3s[j]; if (cur.contains(h) && h.getBoundingClientRect().top + y <= line) curSub = h.id; }
+      $$('.toc-sub a.on').forEach(function (a) { a.classList.remove('on'); });
+      if (curSub && subLinks[curSub]) subLinks[curSub].classList.add('on');
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+  topBtn.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+
+  /* flash target heading on jump */
+  function flash(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var h = el.tagName === 'SECTION' ? el.querySelector('h2') : el;
+    h.classList.remove('flash'); void h.offsetWidth; h.classList.add('flash');
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ block: 'start' });
+    flash(id);
+  });
+  if (location.hash && /^#[\w.~-]+$/.test(location.hash)) {
+    var start = document.getElementById(location.hash.slice(1));
+    if (start) setTimeout(function () { start.scrollIntoView({ block: 'start' }); }, 50);
+  }
+
+  /* search index: one entry per subsection (or chapter intro) */
+  var index = [];
+  chapters.forEach(function (sec) {
+    var chName = sec.querySelector('.eyebrow').textContent + ' · ' + sec.querySelector('h2').textContent;
+    var entry = { id: sec.id, where: chName, title: sec.querySelector('h2').textContent, text: '' };
+    Array.prototype.forEach.call(sec.children, function (node) {
+      if (node.classList && node.classList.contains('ch-head')) return;
+      if (node.tagName === 'H3') {
+        if (entry.text.trim()) index.push(entry);
+        entry = { id: node.id, where: chName, title: node.textContent.replace('†', '').trim(), text: '' };
+      } else { entry.text += ' ' + node.textContent; }
+    });
+    if (entry.text.trim()) index.push(entry);
+  });
+  index.forEach(function (e) { e.text = e.text.replace(/\s+/g, ' ').trim(); e.hay = (e.title + ' ' + e.text).toLowerCase(); });
+
+  var q = $('#q'), results = $('#results'), active = -1;
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function hl(s, term) {
+    var i = s.toLowerCase().indexOf(term); if (i < 0) return esc(s);
+    return esc(s.slice(0, i)) + '<mark>' + esc(s.slice(i, i + term.length)) + '</mark>' + esc(s.slice(i + term.length));
+  }
+  function hideResults() { results.hidden = true; active = -1; }
+  function render() {
+    var term = q.value.trim().toLowerCase();
+    if (term.length < 2) { hideResults(); return; }
+    var words = term.split(/\s+/);
+    var hits = index.filter(function (e) { return words.every(function (w) { return e.hay.indexOf(w) >= 0; }); });
+    hits.sort(function (a, b) { return (b.title.toLowerCase().indexOf(words[0]) >= 0) - (a.title.toLowerCase().indexOf(words[0]) >= 0); });
+    if (!hits.length) { results.innerHTML = '<p class="none">Tidak ada hasil untuk “' + esc(q.value.trim()) + '”. Coba kata lain, misalnya “izin” atau “gaji”.</p>'; results.hidden = false; return; }
+    var html = '<div class="count">' + hits.length + ' bagian ditemukan</div>';
+    hits.slice(0, 30).forEach(function (e) {
+      var w = words[0], i = e.text.toLowerCase().indexOf(w), snip;
+      if (i < 0) snip = e.text.slice(0, 110);
+      else { var st = Math.max(0, i - 50); snip = (st > 0 ? '…' : '') + e.text.slice(st, i + 80) + '…'; }
+      html += '<a href="#' + e.id + '"><span class="r-where">' + esc(e.where) + '</span><span class="r-title">' + hl(e.title, w) + '</span><span class="r-snip">' + hl(snip, w) + '</span></a>';
+    });
+    results.innerHTML = html; results.hidden = false; active = -1;
+  }
+  q.addEventListener('input', render);
+  q.addEventListener('focus', render);
+  q.addEventListener('keydown', function (e) {
+    var items = $$('a', results);
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); active = Math.min(items.length - 1, active + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); active = Math.max(0, active - 1); }
+    else if (e.key === 'Enter') { e.preventDefault(); (items[active] || items[0]).click(); return; }
+    else return;
+    items.forEach(function (a, i) { a.classList.toggle('on', i === active); });
+    items[active].scrollIntoView({ block: 'nearest' });
+  });
+  results.addEventListener('click', function (e) { if (e.target.closest('a')) { hideResults(); q.blur(); } });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.search')) hideResults(); });
+})();
+</script>
+</body>
+</html>
