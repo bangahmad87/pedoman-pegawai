@@ -299,7 +299,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
       <p class="lede">Panduan hak, kewajiban, dan tata kerja bagi seluruh guru, tenaga kependidikan, dan tenaga non-kependidikan FIWA.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#panduan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg>Mulai membaca</a>
-        <a class="btn btn-ghost" href="buku-pedoman-pegawai-fiwa-2026.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Unduh PDF</a>
+        <button type="button" class="btn btn-ghost" data-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>Cetak buku A5</button>
         <button type="button" class="btn btn-ghost" id="heroSearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Cari topik</button>
       </div>
       <ul class="meta">
@@ -336,6 +336,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
   <div class="sizes" role="group" aria-label="Ukuran teks">
     <button type="button" class="icon-btn" id="fsDown" aria-label="Perkecil teks">A−</button>
     <button type="button" class="icon-btn" id="fsUp" aria-label="Perbesar teks">A+</button>
+    <button type="button" class="icon-btn" data-book aria-label="Cetak buku A5" title="Cetak buku A5 / simpan PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg></button>
   </div>
   <div class="progress" id="progress"></div>
 </div></div>
@@ -2574,6 +2575,200 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
   });
   results.addEventListener('click', function (e) { if (e.target.closest('a')) { hideResults(); q.blur(); } });
   document.addEventListener('click', function (e) { if (!e.target.closest('.search')) hideResults(); });
+})();
+</script>
+<script>
+/* Mode buku A5: menyusun ulang isi halaman ini menjadi buku (Paged.js), lalu bisa dicetak / disimpan sebagai PDF. */
+(function () {
+  var PAGED_SRC = 'https://cdn.jsdelivr.net/npm/pagedjs@0.4.3/dist/paged.min.js';
+  var PATTERN = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ecca7f' stroke-opacity='.30' stroke-width='1'%3E%3Cpath d='M18 18h36v36H18z'/%3E%3Cpath d='M36 10.5 61.5 36 36 61.5 10.5 36z'/%3E%3Cpath d='M36 0v10.5M36 61.5V72M0 36h10.5M61.5 36H72'/%3E%3Ccircle cx='36' cy='36' r='7'/%3E%3C/g%3E%3C/svg%3E";
+
+  var MB = 'font-family: Inter, sans-serif; font-size: 5.8pt; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: #8a93a3;';
+  var PN = 'font-family: Inter, sans-serif; font-size: 7pt; font-weight: 700; color: #0f2f52;';
+  var NONE = '@top-left { content: none } @top-right { content: none } @bottom-left { content: none } @bottom-right { content: none }';
+
+  var BOOK_CSS = [
+    '@page { size: A5; }',
+    '@page :left { margin: 17mm 16mm 16mm 13mm; @top-left { content: "Buku Pedoman Pegawai FIWA 2026"; ' + MB + ' vertical-align: bottom; padding-bottom: 3mm; } @bottom-left { content: counter(page); ' + PN + ' vertical-align: top; padding-top: 3mm; } }',
+    '@page :right { margin: 17mm 13mm 16mm 16mm; @top-right { content: string(chapter); ' + MB + ' vertical-align: bottom; padding-bottom: 3mm; } @bottom-right { content: counter(page); ' + PN + ' vertical-align: top; padding-top: 3mm; } }',
+    '@page cover { margin: 0; ' + NONE + ' }',
+    '@page cover:left { margin: 0; ' + NONE + ' } @page cover:right { margin: 0; ' + NONE + ' }',
+    '@page front:left { ' + NONE + ' } @page front:right { ' + NONE + ' }',
+    'html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }',
+    '.book { font-family: Inter, "Segoe UI", sans-serif; font-size: 8.4pt; line-height: 1.55; color: #1b2430; }',
+    '.book a { color: inherit; text-decoration: none; }',
+    '.cover { page: cover; position: relative; width: 148mm; height: 210mm; overflow: hidden; color: #f3ede0; background: radial-gradient(120mm 70mm at 95% 0%, rgba(236,202,127,.26), transparent 62%), radial-gradient(110mm 70mm at 0% 100%, rgba(29,80,137,.6), transparent 60%), linear-gradient(155deg, #0a2240 0%, #123a66 58%, #1d5089 100%); }',
+    '.cover .pat { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url("' + PATTERN + '"); background-size: 15mm 15mm; opacity: .6; }',
+    '.cover .in { position: absolute; top: 18mm; left: 15mm; right: 15mm; bottom: 16mm; }',
+    '.cover .bism { font-family: Amiri, serif; font-size: 16pt; color: #ecca7f; margin: 0; text-align: left; }',
+    '.cover .kick { margin: 14mm 0 0; font-size: 6.8pt; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: #ecca7f; }',
+    '.cover h1 { margin: 4mm 0 0; font-size: 31pt; line-height: 1.03; font-weight: 800; letter-spacing: -.035em; color: #fff; }',
+    '.cover h1 span { color: #e2b960; }',
+    '.cover .rule { width: 18mm; height: 1.2mm; border-radius: 1mm; background: #d9ad55; margin: 6mm 0 0; }',
+    '.cover .lede { margin: 5mm 0 0; font-size: 8.8pt; line-height: 1.55; color: #c3cfdf; }',
+    '.cover .badge { display: inline-block; margin-top: 6mm; padding: 1.4mm 3.2mm; border-radius: 8mm; border: .6pt solid rgba(236,202,127,.6); background: rgba(236,202,127,.16); color: #ecca7f; font-size: 6.4pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }',
+    '.cover .foot { position: absolute; left: 0; right: 0; bottom: 0; border-top: .6pt solid rgba(236,202,127,.45); padding-top: 4mm; font-size: 7pt; line-height: 1.5; color: #c3cfdf; }',
+    '.cover .foot b { display: block; color: #fff; font-size: 7.8pt; }',
+    '.front { page: front; }',
+    '.colophon { break-before: page; height: 170mm; position: relative; font-size: 6.8pt; color: #5b6678; line-height: 1.6; }',
+    '.colophon .c-in { position: absolute; left: 0; right: 0; bottom: 0; }',
+    '.colophon p { margin: 0 0 2.5mm; }',
+    '.colophon b { color: #0f2f52; font-size: 7.8pt; }',
+    '.colophon .note { padding: 2mm 2.6mm; background: #fbf1dc; color: #7b5512; border-radius: 1.4mm; }',
+    '.toc { break-before: right; }',
+    '.toc h1 { margin: 6mm 0 0; font-size: 18pt; font-weight: 800; letter-spacing: -.02em; color: #0f2f52; }',
+    '.toc h1::after { content: ""; display: block; width: 14mm; height: 1mm; background: #b48a35; margin: 3mm 0 5mm; border-radius: 1mm; }',
+    '.toc ol { list-style: none; margin: 0; padding: 0; }',
+    '.toc li { break-inside: avoid; }',
+    '.toc a { display: flex; align-items: baseline; gap: 1.5mm; }',
+    '.toc a .dots { flex: 1; border-bottom: .7pt dotted #b6bfcc; min-width: 4mm; }',
+    '.toc a::after { content: target-counter(attr(href), page); font-variant-numeric: tabular-nums; min-width: 5mm; text-align: right; }',
+    '.toc .ch > a { margin-top: 2.6mm; font-weight: 700; color: #0f2f52; font-size: 8.4pt; break-after: avoid; }',
+    '.toc .ch .n { display: inline-block; width: 17mm; flex: none; font-size: 6pt; letter-spacing: .12em; text-transform: uppercase; color: #8a651e; }',
+    '.toc .sub > a { padding-left: 17mm; margin-top: .6mm; color: #3c4757; font-size: 7.6pt; }',
+    '.chapter { break-before: page; }',
+    '.chapter.first { break-before: right; }',
+    '.ch-head { padding-top: 6mm; margin-bottom: 5mm; }',
+    '.eyebrow { margin: 0 0 1.5mm; font-size: 6.6pt; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8a651e; }',
+    '.chapter h2 { margin: 0; font-size: 17pt; line-height: 1.14; font-weight: 800; letter-spacing: -.02em; color: #0f2f52; string-set: chapter content(text); }',
+    '.chapter h2::after { content: ""; display: block; width: 13mm; height: 1mm; background: #b48a35; margin-top: 3mm; border-radius: 1mm; }',
+    '.chapter h3 { font-size: 9.6pt; font-weight: 700; color: #0f2f52; margin: 5mm 0 1.6mm; break-after: avoid; }',
+    '.chapter p { margin: 0 0 2.2mm; orphans: 2; widows: 2; }',
+    '.chapter ol, .chapter ul { margin: 0 0 2.6mm; padding-left: 5mm; }',
+    '.chapter li { margin: 0 0 1mm; }',
+    '.chapter li::marker { color: #8a651e; font-weight: 700; }',
+    '.chapter ol ol { list-style: lower-alpha; margin-top: 1mm; }',
+    '.arabic { font-family: Amiri, serif; font-size: 13pt; line-height: 1.8; text-align: center; color: #8a651e; margin: 1mm 0; }',
+    '.tbl { margin: 1.6mm 0 3.6mm; }',
+    '.tbl table { width: 100%; border-collapse: collapse; font-size: 6.9pt; line-height: 1.42; border: .5pt solid #d6dde6; }',
+    '.tbl tr { break-inside: avoid; }',
+    '.tbl th { background: #eef2f7; color: #5b6678; font-size: 5.8pt; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-align: left; padding: 1.6mm 2mm; border-bottom: .5pt solid #d6dde6; }',
+    '.tbl td { padding: 1.5mm 2mm; vertical-align: top; border-bottom: .5pt solid #d6dde6; }',
+    '.tbl td:first-child { font-weight: 600; }',
+    '.tbl.kv thead { display: none; }',
+    '.formula { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5mm 2.5mm; margin: 1mm 0 3mm; padding: 2.4mm 3mm; background: #f4f7fb; border-radius: 1.6mm; font-size: 7.6pt; break-inside: avoid; }',
+    '.f-lhs { font-weight: 700; } .f-frac { display: inline-flex; flex-direction: column; text-align: center; }',
+    '.f-num { padding: 0 1.2mm .8mm; border-bottom: .7pt solid #1b2430; } .f-den { padding: .8mm 1.2mm 0; }',
+    '.tbd { display: inline-block; min-width: 3mm; padding: 0 .6mm; border-radius: .8mm; background: #fbf1dc; color: #7b5512; font-size: 6.4pt; font-weight: 700; text-align: center; line-height: 1.5; }',
+    '#lampiran-4 .tbl td { padding: 3mm 2mm; }',
+    '#lampiran-4 p:last-of-type { margin-top: 18mm; }'
+  ].join('\n');
+
+  var SCREEN_CSS = [
+    'html, body { margin: 0; padding: 0; }',
+    '@media screen {',
+    '  body { background: #dfe4ea; }',
+    '  .pagedjs_pages { display: flex; flex-direction: column; align-items: center; padding: 76px 0 40px; }',
+    '  .pagedjs_page { background: #fff; margin: 0 auto 18px; box-shadow: 0 1px 2px rgba(10,25,45,.12), 0 10px 28px rgba(10,25,45,.16); }',
+    '  @media (max-width: 620px) { .pagedjs_pages { zoom: .62; padding-top: 110px; } }',
+    '}',
+    '@media print { .pv-bar, #pv-loading { display: none !important; } }',
+    '.pv-bar { position: fixed; z-index: 100; top: 0; left: 0; right: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px max(16px, env(safe-area-inset-right, 0px)) 12px max(16px, env(safe-area-inset-left, 0px)); background: #0f2f52; color: #f3ede0; font: 500 14px/1.4 Inter, system-ui, sans-serif; box-shadow: 0 4px 16px rgba(0,0,0,.2); }',
+    '.pv-bar strong { font-weight: 700; color: #fff; }',
+    '.pv-bar span { color: #b9c6d8; }',
+    '.pv-bar .grow { flex: 1; min-width: 160px; }',
+    '.pv-bar button { height: 40px; padding: 0 16px; border-radius: 10px; font: 700 14px Inter, system-ui, sans-serif; cursor: pointer; }',
+    '.pv-print { background: linear-gradient(180deg, #ecca7f, #c4943a); color: #0a2240; border: 0; }',
+    '.pv-back { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }',
+    '#pv-loading { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: #0f2f52; color: #f3ede0; font: 600 16px Inter, system-ui, sans-serif; text-align: center; padding: 24px; }',
+    '#pv-loading small { display: block; margin-top: 6px; font-weight: 400; color: #b9c6d8; font-size: 13px; }'
+  ].join('\n');
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function buildBook() {
+    var chapters = Array.prototype.slice.call(document.querySelectorAll('main .chapter'));
+    var toc = '';
+    var body = '';
+    chapters.forEach(function (sec, i) {
+      var c = sec.cloneNode(true);
+      c.classList.remove('flash');
+      if (i === 0) c.classList.add('first');
+      Array.prototype.forEach.call(c.querySelectorAll('.tbl'), function (t) { t.classList.remove('stack'); });
+      Array.prototype.forEach.call(c.querySelectorAll('.flash'), function (el) { el.classList.remove('flash'); });
+      body += c.outerHTML;
+      var ey = sec.querySelector('.eyebrow').textContent.trim();
+      var title = sec.querySelector('h2').textContent.trim();
+      toc += '<li class="ch"><a href="#' + sec.id + '"><span class="n">' + (ey === 'Mulai di sini' ? '' : esc(ey)) + '</span><span>' + esc(title) + '</span><span class="dots"></span></a></li>';
+      Array.prototype.forEach.call(sec.querySelectorAll('h3[id]'), function (h) {
+        toc += '<li class="sub"><a href="#' + h.id + '"><span>' + esc(h.textContent.replace(/◆/g, '').trim()) + '</span><span class="dots"></span></a></li>';
+      });
+    });
+    var today = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+    var cover = '<section class="cover"><div class="pat"></div><div class="in">' +
+      '<p class="bism" dir="rtl">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>' +
+      '<p class="kick">Fitrah Islamic World Academy</p>' +
+      '<h1>Buku Pedoman<br>Pegawai <span>2026</span></h1><div class="rule"></div>' +
+      '<p class="lede">Panduan hak, kewajiban, dan tata kerja bagi seluruh guru, tenaga kependidikan, dan tenaga non-kependidikan FIWA.</p>' +
+      '<span class="badge">Draf untuk ditelaah</span>' +
+      '<div class="foot"><b>Yayasan Ashabul Fitrah Indonesia</b>Jl. H. Miing No. 67, Desa Karihkil, Ciseeng, Kabupaten Bogor 16120</div>' +
+      '</div></section>';
+    var colophon = '<section class="colophon front"><div class="c-in">' +
+      '<p><b>Buku Pedoman Pegawai Fitrah Islamic World Academy 2026</b></p>' +
+      '<p>Diterbitkan oleh Yayasan Ashabul Fitrah Indonesia (YAFI)<br>Jl. H. Miing No. 67, Desa Karihkil, Kecamatan Ciseeng, Kabupaten Bogor, Jawa Barat 16120<br>info@fiwa.sch.id · +62 811 1222 3777 · www.fiwaschool.com</p>' +
+      '<p>Dokumen internal untuk pegawai FIWA. Tidak untuk diperjualbelikan.<br>Dicetak dari versi online pada ' + esc(today) + '.</p>' +
+      '<p class="note">Draf untuk ditelaah. Ketentuan bertanda ◆ masih menunggu keputusan Pimpinan FIWA dan dapat berubah sebelum buku ditetapkan.</p>' +
+      '</div></section>';
+    var tocHtml = '<nav class="toc front"><h1>Daftar Isi</h1><ol>' + toc + '</ol></nav>';
+    return '<div class="book">' + cover + colophon + tocHtml + body + '</div>';
+  }
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      if (window.Paged || window.PagedModule) return resolve();
+      var s = document.createElement('script');
+      s.src = src; s.onload = resolve; s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  function showLoading() {
+    var d = document.createElement('div');
+    d.id = 'pv-loading';
+    d.innerHTML = '<div>Menyiapkan buku A5…<small>Menyusun halaman, nomor halaman, dan daftar isi. Biasanya 5–15 detik.</small></div>';
+    document.documentElement.appendChild(d);
+    return d;
+  }
+
+  async function openBook() {
+    var html = buildBook();
+    // Bersihkan gaya halaman web; font Google tetap dipakai.
+    Array.prototype.forEach.call(document.querySelectorAll('style, link[rel="stylesheet"]'), function (el) {
+      if (el.tagName === 'LINK' && /fonts\.googleapis\.com/.test(el.href)) return;
+      el.parentNode.removeChild(el);
+    });
+    var scr = document.createElement('style'); scr.textContent = SCREEN_CSS; document.head.appendChild(scr);
+    var loading = showLoading();
+    document.body.innerHTML = '';
+    document.body.removeAttribute('class');
+    window.scrollTo(0, 0);
+    try {
+      await loadScript(window.FIWA_PAGED_SRC || PAGED_SRC);
+      if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      var tpl = document.createElement('template');
+      tpl.innerHTML = html;
+      var P = window.Paged || window.PagedModule;
+      var previewer = new P.Previewer();
+      var flow = await previewer.preview(tpl.content, [{ 'buku-a5.css': BOOK_CSS }], document.body);
+      var bar = document.createElement('div');
+      bar.className = 'pv-bar';
+      bar.innerHTML = '<div class="grow"><strong>Pratinjau buku A5</strong> <span>· ' + flow.total + ' halaman. Di jendela cetak, pilih ukuran kertas A5 dan aktifkan "Background graphics".</span></div>' +
+        '<button type="button" class="pv-print">Cetak / Simpan PDF</button><button type="button" class="pv-back">Kembali ke web</button>';
+      document.documentElement.appendChild(bar);
+      bar.querySelector('.pv-print').addEventListener('click', function () { window.print(); });
+      bar.querySelector('.pv-back').addEventListener('click', function () { location.reload(); });
+      loading.parentNode.removeChild(loading);
+      window.FIWA_BOOK_PAGES = flow.total;
+    } catch (e) {
+      loading.innerHTML = '<div>Buku belum bisa disiapkan.<small>Periksa koneksi internet, lalu muat ulang halaman dan coba lagi.</small></div>';
+      window.FIWA_BOOK_ERROR = String(e && e.message || e);
+    }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-book]'), function (btn) {
+    btn.addEventListener('click', openBook);
+  });
+  window.FIWA_openBook = openBook;
 })();
 </script>
 </body>
