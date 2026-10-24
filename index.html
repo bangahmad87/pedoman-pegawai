@@ -216,6 +216,7 @@ a { color: var(--accent); text-underline-offset: 3px; }
 .foot-logo-wrap { flex-basis: 100%; }
 .foot-logo-wrap .logo-plate { height: 60px; box-shadow: none; border: 1px solid var(--line); }
 @media (max-width: 1023.98px) { .hero-logo { display: none; } }
+@media (max-width: 560px) { .bar .brand { display: none; } }
 
 /* ---------- top bar ---------- */
 .bar {
@@ -315,6 +316,10 @@ main { min-width: 0; }
 .chapter p { margin: 0 0 1em; }
 .chapter ol, .chapter ul { padding-left: 1.4em; margin: 0 0 1.2em; }
 .chapter li { margin: .3em 0; padding-left: .2em; }
+/* rata kiri-kanan untuk teks isi; tabel, judul, dan rumus tetap rata kiri */
+.chapter p, .chapter li { text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; hyphenate-limit-chars: 7 3 3; }
+.chapter .tbl p, .chapter .tbl li, .chapter .arabic, .chapter .formula { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+.chapter .arabic { text-align: center; }
 .chapter li::marker { color: var(--gold-text); font-weight: 700; }
 .chapter ol ol { list-style: lower-alpha; margin: .3em 0; }
 .chapter strong { font-weight: 700; }
@@ -460,7 +465,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <li class="toc-ch" data-id="bab-8"><a href="#bab-8" class="toc-link"><span class="toc-num">Bab 8</span><span class="toc-title">Waktu Kerja, Lembur, dan Perjalanan Dinas</span></a><ol class="toc-sub"><li><a href="#bab-8-a">A. Jam Kerja</a></li><li><a href="#bab-8-b">B. Lembur</a></li><li><a href="#bab-8-c">C. Perjalanan Dinas</a></li></ol></li>
 <li class="toc-ch" data-id="bab-9"><a href="#bab-9" class="toc-link"><span class="toc-num">Bab 9</span><span class="toc-title">Kehadiran dan Izin</span></a><ol class="toc-sub"><li><a href="#bab-9-a">A. Ringkasan: Apa yang Harus Saya Lakukan?</a></li><li><a href="#bab-9-b">B. Pencatatan Kehadiran</a></li><li><a href="#bab-9-c">C. Sakit</a></li><li><a href="#bab-9-d">D. Izin Pribadi</a></li><li><a href="#bab-9-e">E. Cuti Normatif (Izin dengan Upah Penuh)</a></li><li><a href="#bab-9-f">F. Izin Khusus dari Yayasan</a></li><li><a href="#bab-9-g">G. Keterlambatan dan Pulang Cepat</a></li><li><a href="#bab-9-h">H. Mangkir</a></li></ol></li>
 <li class="toc-ch" data-id="bab-10"><a href="#bab-10" class="toc-link"><span class="toc-num">Bab 10</span><span class="toc-title">Cuti</span></a><ol class="toc-sub"><li><a href="#bab-10-a">A. Jenis Cuti</a></li><li><a href="#bab-10-b">B. Cuti Tahunan</a></li><li><a href="#bab-10-c">C. Cuti Besar</a></li><li><a href="#bab-10-d">D. Cuti Melahirkan</a></li><li><a href="#bab-10-e">E. Prosedur Pengajuan Cuti</a></li></ol></li>
-<li class="toc-ch" data-id="bab-11"><a href="#bab-11" class="toc-link"><span class="toc-num">Bab 11</span><span class="toc-title">Gaji dan Potongan</span></a><ol class="toc-sub"><li><a href="#bab-11-a">A. Penetapan dan Kenaikan Gaji</a></li><li><a href="#bab-11-b">B. Komponen Penghasilan</a></li><li><a href="#bab-11-c">C. Pembayaran Gaji</a></li><li><a href="#bab-11-d">D. Dampak Ketidakhadiran (Pegawai Selain Guru)</a></li><li><a href="#bab-11-e">E. Potongan bagi Guru</a></li><li><a href="#bab-11-f">F. Gaji Selama Sakit Berkepanjangan</a></li></ol></li>
+<li class="toc-ch" data-id="bab-11"><a href="#bab-11" class="toc-link"><span class="toc-num">Bab 11</span><span class="toc-title">Gaji dan Potongan</span></a><ol class="toc-sub"><li><a href="#bab-11-a">A. Penetapan dan Kenaikan Gaji</a></li><li><a href="#bab-11-b">B. Komponen Penghasilan</a></li><li><a href="#bab-11-c">C. Pembayaran Gaji</a></li><li><a href="#bab-11-d">D. Gaji Prorata Pegawai Baru dan Pegawai yang Berhenti</a></li><li><a href="#bab-11-e">E. Hak atas Upah Saat Tidak Masuk Kerja</a></li><li><a href="#bab-11-f">F. Perhitungan Upah yang Tidak Dibayar</a></li><li><a href="#bab-11-g">G. Ringkasan Dampak Ketidakhadiran (Pegawai Selain Guru)</a></li><li><a href="#bab-11-h">H. Ketentuan Khusus Guru</a></li><li><a href="#bab-11-i">I. Gaji Selama Sakit Berkepanjangan</a></li></ol></li>
 <li class="toc-ch" data-id="bab-12"><a href="#bab-12" class="toc-link"><span class="toc-num">Bab 12</span><span class="toc-title">Kesejahteraan</span></a><ol class="toc-sub"><li><a href="#bab-12-a">A. Ringkasan Program</a></li><li><a href="#bab-12-b">B. BPJS</a></li><li><a href="#bab-12-c">C. Tunjangan Hari Raya (THR)</a></li><li><a href="#bab-12-d">D. Uang Duka</a></li><li><a href="#bab-12-e">E. Hadiah Pernikahan dan Kelahiran</a></li><li><a href="#bab-12-f">F. Pinjaman</a></li></ol></li>
 <li class="toc-ch" data-id="bab-13"><a href="#bab-13" class="toc-link"><span class="toc-num">Bab 13</span><span class="toc-title">Pelanggaran dan Sanksi</span></a><ol class="toc-sub"><li><a href="#bab-13-a">A. Tingkatan Sanksi</a></li><li><a href="#bab-13-b">B. Klasifikasi Pelanggaran</a></li><li><a href="#bab-13-c">C. Ketentuan Surat Peringatan</a></li><li><a href="#bab-13-d">D. Bentuk Sanksi Lain</a></li></ol></li>
 <li class="toc-ch" data-id="bab-14"><a href="#bab-14" class="toc-link"><span class="toc-num">Bab 14</span><span class="toc-title">Berakhirnya Hubungan Kerja</span></a><ol class="toc-sub"><li><a href="#bab-14-a">A. Penyebab</a></li><li><a href="#bab-14-b">B. Mengundurkan Diri</a></li><li><a href="#bab-14-c">C. Sakit Berkepanjangan</a></li><li><a href="#bab-14-d">D. Mangkir</a></li><li><a href="#bab-14-e">E. Kesalahan Berat</a></li><li><a href="#bab-14-f">F. Hak dan Kewajiban saat PHK</a></li></ol></li>
@@ -471,7 +476,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <li class="toc-ch" data-id="lampiran-4"><a href="#lampiran-4" class="toc-link"><span class="toc-num">Lampiran 4</span><span class="toc-title">Surat Pernyataan Kesanggupan</span></a></li>
     </ol>
   </nav>
-  <main id="main">
+  <main id="main" lang="id">
     <div class="draft-note"><span class="tbd" aria-hidden="true">◆</span><span>Ini adalah draf. Ketentuan bertanda <strong>◆</strong> masih menunggu keputusan Pimpinan FIWA dan dapat berubah sebelum buku ditetapkan.</span></div>
 
 <section class="chapter" id="panduan" aria-labelledby="panduan-h"><header class="ch-head"><p class="eyebrow">Mulai di sini</p><h2 id="panduan-h">Cara Membaca Buku Ini</h2></header>
@@ -747,7 +752,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 </tr>
 <tr>
 <td>Upah</td>
-<td>Gaji pokok + tunjangan tetap; dasar perhitungan lembur, THR, BPJS Ketenagakerjaan, dan gaji saat sakit panjang</td>
+<td>Gaji pokok + tunjangan tetap; dasar perhitungan THR, BPJS Ketenagakerjaan, dan gaji saat sakit panjang</td>
 </tr>
 <tr>
 <td>JP</td>
@@ -764,6 +769,22 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <tr>
 <td>Mangkir</td>
 <td>Tidak hadir pada hari kerja tanpa izin yang disetujui di FIAS</td>
+</tr>
+<tr>
+<td>Tunjangan tetap</td>
+<td>Tunjangan yang dibayar tetap setiap bulan tanpa bergantung pada kehadiran, misalnya tunjangan jabatan</td>
+</tr>
+<tr>
+<td>Tunjangan tidak tetap</td>
+<td>Tunjangan yang dibayar sesuai kehadiran, yaitu tunjangan kehadiran dan tunjangan transportasi</td>
+</tr>
+<tr>
+<td>Upah per hari kerja</td>
+<td>Upah sebulan dibagi hari kerja terjadwal pegawai dalam periode penggajian berjalan (Bab 11 bagian F)</td>
+</tr>
+<tr>
+<td>Ketidakhadiran tanpa hak atas Upah</td>
+<td>Hari kerja terjadwal yang tidak dikerjakan dan tidak termasuk keadaan yang tetap dibayar Upahnya (Bab 11 bagian E)</td>
 </tr>
 </tbody>
 </table></div>
@@ -1419,12 +1440,12 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <h3 id="bab-9-c">C. Sakit</h3>
 <ol>
 <li>Ajukan <strong>Sakit</strong> dengan melampirkan foto surat keterangan dokter yang menyatakan perlu istirahat. Bila surat dokter belum ada, ajukan dulu, lalu lampirkan suratnya paling lambat hari pertama kembali bekerja.</li>
-<li>Sakit dengan Surat Keterangan Dokter (SKD) tidak dikenakan potongan gaji maupun tunjangan dan tidak mengurangi cuti tahunan, untuk jumlah hari istirahat yang direkomendasikan dokter. Hari tidak masuk di luar rekomendasi dokter diperlakukan sebagai izin.</li>
+<li>Sakit dengan Surat Keterangan Dokter (SKD) tidak dikenakan potongan gaji maupun tunjangan dan tidak mengurangi cuti tahunan, untuk jumlah hari istirahat yang direkomendasikan dokter, dengan memperhatikan ketentuan sakit berkepanjangan pada Bab 11 bagian I. Hari tidak masuk di luar rekomendasi dokter diperlakukan sebagai izin.</li>
 <li>Sakit tanpa SKD dianggap izin biasa dan dikenakan potongan sesuai bagian D dan Bab 11.</li>
-<li>Sakit lama dan terus-menerus diatur di Bab 11 bagian F.</li>
+<li>Sakit lama dan terus-menerus diatur di Bab 11 bagian I.</li>
 </ol>
 <h3 id="bab-9-d">D. Izin Pribadi</h3>
-<p>Izin pribadi diberikan atas pertimbangan atasan, <strong>mengurangi jatah cuti tahunan</strong>, dan tidak mendapat tunjangan kehadiran maupun transportasi untuk hari tersebut. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span> Bila cuti tahunan sudah habis, gaji pokok hari itu juga dipotong sebesar gaji pokok dibagi jumlah hari kerja terjadwal dalam periode penggajian. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></p>
+<p>Izin pribadi diberikan atas pertimbangan atasan, <strong>mengurangi jatah cuti tahunan</strong>, dan tidak mendapat tunjangan kehadiran maupun transportasi untuk hari tersebut. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span> Bila cuti tahunan sudah habis, hari tersebut menjadi ketidakhadiran tanpa hak atas Upah dan dihitung sesuai Bab 11 bagian F. Ketentuan khusus guru diatur di Bab 11 bagian H.</p>
 <h3 id="bab-9-e">E. Cuti Normatif (Izin dengan Upah Penuh)</h3>
 <p>Tidak memotong cuti tahunan.</p>
 <div class="tbl"><table>
@@ -1458,6 +1479,10 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <tr>
 <td>Kematian anggota keluarga dalam satu rumah</td>
 <td>1 hari kerja</td>
+</tr>
+<tr>
+<td>Sakit pada hari pertama dan kedua haid (pegawai perempuan), dengan memberi tahu atasan</td>
+<td>Paling lama 2 hari kerja</td>
 </tr>
 </tbody>
 </table></div>
@@ -1532,8 +1557,8 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <h3 id="bab-9-h">H. Mangkir</h3>
 <ol>
 <li>Tidak hadir pada hari kerja tanpa izin yang disetujui di FIAS dianggap mangkir. Untuk izin mendadak, tetap kabari atasan langsung secepatnya.</li>
-<li>Akibatnya: jatah cuti tahunan dikurangi, tunjangan kehadiran dan transportasi hari itu tidak dibayar, dan dikenai sanksi sesuai Bab 13.</li>
-<li>Mangkir <strong>5 hari kerja berturut-turut</strong> dan telah dipanggil HRD 2 kali secara tertulis dianggap mengundurkan diri (Bab 14).</li>
+<li>Akibatnya: Upah, tunjangan kehadiran, dan tunjangan transportasi hari itu tidak dibayar (Bab 11 bagian F), dan pegawai dikenai sanksi sesuai Bab 13.</li>
+<li>Mangkir <strong>5 hari kerja berturut-turut</strong> tanpa keterangan tertulis yang dilengkapi bukti sah, dan telah dipanggil HRD 2 kali secara patut dan tertulis, dianggap mengundurkan diri (Bab 14).</li>
 </ol>
 
 </section>
@@ -1581,10 +1606,16 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <td>Penuh</td>
 </tr>
 <tr>
-<td>Cuti di luar tanggungan (umrah, haji, studi)</td>
+<td>Cuti di luar tanggungan (umrah, ibadah haji berikutnya, studi)</td>
 <td>Persetujuan Pimpinan FIWA</td>
 <td>Sesuai persetujuan</td>
 <td>Tanpa gaji, tunjangan, dan fasilitas; tidak dihitung masa kerja</td>
+</tr>
+<tr>
+<td>Cuti ibadah haji</td>
+<td>Ibadah haji pertama selama bekerja di FIWA; persetujuan Pimpinan FIWA</td>
+<td>Sesuai jadwal resmi penyelenggaraan haji</td>
+<td>Penuh, satu kali (Pasal 43 PP 36/2021)</td>
 </tr>
 </tbody>
 </table></div>
@@ -1666,7 +1697,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <tr>
 <th>Komponen</th>
 <th>Porsi</th>
-<th>Dipengaruhi kehadiran?</th>
+<th>Dihitung dari kehadiran harian?</th>
 </tr>
 </thead>
 <tbody>
@@ -1712,22 +1743,195 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 </tr>
 </tbody>
 </table></div>
-<p><strong>Contoh.</strong> THP Dasar Rp4.000.000 = gaji pokok Rp2.000.000 + tunjangan kehadiran Rp1.200.000 + tunjangan transportasi Rp800.000. Tunjangan jabatan Rp500.000 dibayar di luar THP Dasar dan tidak dipotong karena ketidakhadiran.</p>
-<p>Tunjangan kehadiran dan transportasi dihitung HRD melalui FIAS, prorata terhadap hari kerja terjadwal dalam periode penggajian.</p>
+<p><strong>Contoh.</strong> THP Dasar Rp4.000.000 = gaji pokok Rp2.000.000 + tunjangan kehadiran Rp1.200.000 + tunjangan transportasi Rp800.000. Tunjangan jabatan Rp500.000 dibayar di luar THP Dasar sebagai bagian dari Upah. Tunjangan ini tidak dipotong karena terlambat atau izin yang diganti cuti, tetapi tidak dibayar untuk hari ketidakhadiran tanpa hak atas Upah (bagian F). Angka dalam setiap contoh di bab ini hanya ilustrasi perhitungan; Upah (gaji pokok dan tunjangan tetap) setiap pegawai tidak boleh lebih rendah dari upah minimum yang berlaku (Pasal 23 ayat (3) PP Nomor 36 Tahun 2021).</p>
+<p><strong>Jenis komponen.</strong> Gaji pokok, tunjangan tetap, tunjangan jabatan, dan tunjangan keahlian/fungsional dibayar tetap setiap bulan tanpa bergantung pada kehadiran. <strong>Dalam buku ini, komponen tersebut disebut Upah, yaitu upah pokok dan tunjangan tetap</strong>. Gaji pokok paling sedikit 75% dari jumlah gaji pokok dan tunjangan tetap (Pasal 7 ayat (2) dan (3) PP Nomor 36 Tahun 2021), sehingga jumlah tunjangan tetap, tunjangan jabatan, dan tunjangan keahlian/fungsional ditetapkan agar batas tersebut terpenuhi. Tunjangan kehadiran dan tunjangan transportasi adalah <strong>tunjangan tidak tetap</strong> yang dibayar sesuai kehadiran (Pasal 7 ayat (1) huruf c). Tunjangan kinerja dan honor kelebihan JP dibayar terpisah sesuai ketentuannya.</p>
 <h3 id="bab-11-c">C. Pembayaran Gaji</h3>
 <ol>
 <li>Periode perhitungan: <strong>tanggal 26 bulan sebelumnya s.d. tanggal 25 bulan berjalan</strong>.</li>
 <li>Gaji dibayar paling lambat <strong>tanggal terakhir bulan berjalan</strong>; bila jatuh pada hari libur, dibayar pada hari kerja sebelumnya.</li>
 <li>Gaji ditransfer ke rekening Bank Syariah Indonesia (BSI); pegawai tanpa rekening BSI mengikuti prosedur khusus bagian keuangan.</li>
-<li>Pegawai baru yang belum genap satu periode dibayar prorata:</li>
+<li>Setiap pembayaran disertai slip gaji yang merinci komponen penghasilan, hari kerja terjadwal, hari tidak hadir, dan setiap potongan.</li>
 </ol>
-<div class="formula" role="math"><span class="f-lhs">Gaji</span><span class="f-eq">=</span><span class="f-frac"><span class="f-num">THP Dasar</span><span class="f-den">hari kerja terjadwal dalam periode</span></span><span class="f-rest">× hari masuk kerja</span></div>
-<p>Contoh: Rp4.000.000 ÷ 21 hari × 10 hari masuk = Rp1.904.762.</p>
-<h3 id="bab-11-d">D. Dampak Ketidakhadiran (Pegawai Selain Guru)</h3>
+<h3 id="bab-11-d">D. Gaji Prorata Pegawai Baru dan Pegawai yang Berhenti</h3>
+<p>Ketentuan ini berlaku bagi pegawai bergaji bulanan yang mulai atau berhenti bekerja di tengah periode penggajian (tanggal 26 s.d. tanggal 25 bulan berikutnya), baik yang berjadwal normal maupun shift.</p>
+<p><strong>Dasar penetapan.</strong> PP Nomor 36 Tahun 2021 tidak menetapkan rumus prorata untuk Upah bulanan. Pembagi 25 dan 21 pada Pasal 17 hanya berlaku apabila Upah ditetapkan secara harian. Karena itu, metode berikut ditetapkan sebagai kebijakan pengupahan FIWA.</p>
+<ol>
+<li><strong>Upah</strong> dihitung menurut hari kalender, karena Upah bulanan juga mencakup hari istirahat mingguan dan hari libur. Cara ini sama untuk pegawai berjadwal normal dan shift.</li>
+</ol>
+<p><strong>Upah prorata = Upah sebulan × hari kalender bekerja dalam periode ÷ jumlah hari kalender periode penggajian</strong></p>
+<ol start="2">
+<li><strong>Tunjangan kehadiran dan transportasi</strong> dihitung menurut kehadiran pada jadwal masing-masing pegawai di FIAS.</li>
+</ol>
+<p><strong>Tunjangan prorata = (Tunjangan Kehadiran + Tunjangan Transportasi) × (hari hadir + hari tidak hadir yang tunjangannya tetap dibayar menurut bagian G) ÷ hari kerja terjadwal pegawai dalam periode penggajian</strong></p>
+<ol start="3">
+<li>Hari kalender bekerja dihitung sejak tanggal mulai bekerja s.d. tanggal 25. Bagi pegawai yang berhenti, dihitung sejak tanggal 26 s.d. hari terakhir bekerja.</li>
+<li>Jumlah hari kalender periode mengikuti kalender, yaitu 28 s.d. 31 hari.</li>
+<li>Hasil akhir dibulatkan ke rupiah terdekat.</li>
+</ol>
+<p><strong>Simulasi.</strong> Upah sebulan (gaji pokok) Rp2.000.000; tunjangan kehadiran + transportasi Rp2.000.000. Periode 26 Juli–25 Agustus 2026 (31 hari kalender). Pegawai mulai bekerja 10 Agustus 2026 dan hadir pada semua hari kerja terjadwal sejak tanggal mulai. Jadwal normal Senin–Jumat tidak memasukkan hari libur resmi 17 dan 25 Agustus 2026; roster shift dalam contoh ini tetap bekerja pada hari libur sesuai jadwalnya.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Uraian</th>
+<th>Jadwal normal</th>
+<th>Jadwal shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hari kalender bekerja</td>
+<td>16 hari (10–25 Agustus)</td>
+<td>16 hari (10–25 Agustus)</td>
+</tr>
+<tr>
+<td>Upah prorata</td>
+<td>Rp2.000.000 × 16 ÷ 31 = Rp1.032.258</td>
+<td>Rp2.000.000 × 16 ÷ 31 = Rp1.032.258</td>
+</tr>
+<tr>
+<td>Hari kerja terjadwal dalam periode</td>
+<td>20 hari</td>
+<td>26 hari</td>
+</tr>
+<tr>
+<td>Hari hadir sejak mulai bekerja</td>
+<td>10 hari</td>
+<td>14 hari</td>
+</tr>
+<tr>
+<td>Tunjangan prorata</td>
+<td>Rp2.000.000 × 10 ÷ 20 = Rp1.000.000</td>
+<td>Rp2.000.000 × 14 ÷ 26 = Rp1.076.923</td>
+</tr>
+<tr>
+<td>Jumlah diterima</td>
+<td>Rp2.032.258</td>
+<td>Rp2.109.181</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bab-11-e">E. Hak atas Upah Saat Tidak Masuk Kerja</h3>
+<p>Dasar hukum: PP Nomor 36 Tahun 2021 tentang Pengupahan sebagaimana telah diubah terakhir dengan PP Nomor 49 Tahun 2025. Prinsipnya, Upah tidak dibayar apabila pegawai tidak masuk bekerja dan/atau tidak melakukan pekerjaan (Pasal 40 ayat (1)). Prinsip ini tidak berlaku, dan FIWA tetap membayar Upah, dalam keadaan berikut.</p>
 <div class="tbl"><table>
 <thead>
 <tr>
 <th>Keadaan</th>
+<th>Upah yang dibayar</th>
+<th>Dasar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sakit sehingga tidak dapat bekerja</td>
+<td>100% bulan ke-1 s.d. ke-4, 75% bulan ke-5 s.d. ke-8, 50% bulan ke-9 s.d. ke-12, 25% sesudahnya (bagian I)</td>
+<td>Pasal 41 ayat (1)</td>
+</tr>
+<tr>
+<td>Sakit pada hari pertama dan kedua haid</td>
+<td>Penuh, paling lama 2 hari</td>
+<td>Pasal 41 ayat (2)</td>
+</tr>
+<tr>
+<td>Menikah (3 hari); menikahkan, mengkhitankan, atau membaptiskan anak, istri melahirkan atau keguguran, kematian suami/istri, orang tua/mertua, anak/menantu (2 hari); kematian anggota keluarga serumah (1 hari)</td>
+<td>Penuh</td>
+<td>Pasal 41 ayat (3)</td>
+</tr>
+<tr>
+<td>Menjalankan kewajiban terhadap negara</td>
+<td>Kekurangan dari pembayaran negara, paling lama 1 tahun</td>
+<td>Pasal 42</td>
+</tr>
+<tr>
+<td>Menjalankan ibadah yang diperintahkan agama (ibadah haji)</td>
+<td>Penuh, satu kali selama bekerja di FIWA</td>
+<td>Pasal 43</td>
+</tr>
+<tr>
+<td>Tugas serikat pekerja dengan persetujuan FIWA</td>
+<td>Penuh</td>
+<td>Pasal 40 ayat (4) huruf c; Pasal 44</td>
+</tr>
+<tr>
+<td>Pendidikan atau pelatihan yang ditugaskan FIWA</td>
+<td>Penuh</td>
+<td>Pasal 45</td>
+</tr>
+<tr>
+<td>Istirahat mingguan, cuti tahunan, cuti besar (istirahat panjang), istirahat melahirkan, istirahat keguguran</td>
+<td>Sebesar Upah yang biasa diterima</td>
+<td>Pasal 46</td>
+</tr>
+<tr>
+<td>Pegawai bersedia bekerja tetapi tidak dipekerjakan karena kesalahan FIWA sendiri atau kendala yang seharusnya dapat dihindari FIWA</td>
+<td>Penuh (kebijakan FIWA)</td>
+<td>Pasal 40 ayat (2) huruf d</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sebagai ketentuan pelaksanaan menurut Pasal 47, FIWA mensyaratkan bukti untuk setiap keadaan, yaitu SKD untuk sakit, serta akta, surat tugas, atau dokumen sejenis untuk keadaan lain, yang dilampirkan di FIAS. Syarat SKD merupakan kebijakan FIWA; PP Nomor 36 Tahun 2021 tidak menetapkan jenis bukti sakit. Pegawai yang menjalankan kewajiban terhadap negara, termasuk memenuhi panggilan resmi instansi pemerintah yang merupakan kewajiban terhadap negara, memberitahukannya secara tertulis kepada FIWA (Pasal 42).</p>
+<p><strong>Ketidakhadiran tanpa hak atas Upah</strong> meliputi:</p>
+<ol>
+<li>Mangkir (Bab 9 bagian H).</li>
+<li>Izin pribadi atau sakit tanpa SKD ketika cuti tahunan sudah habis, kecuali bagi guru (bagian H).</li>
+<li>Hari tidak masuk yang melebihi rekomendasi istirahat dalam SKD, bila tidak diganti cuti tahunan.</li>
+<li>Cuti di luar tanggungan (umrah, ibadah haji berikutnya, studi).</li>
+</ol>
+<h3 id="bab-11-f">F. Perhitungan Upah yang Tidak Dibayar</h3>
+<p>Untuk ketidakhadiran tanpa hak atas Upah, bagian yang tidak dibayar dihitung per hari kerja terjadwal pegawai dalam periode penggajian berjalan. FIWA tidak memakai pembagi tetap (misalnya 21, 24, atau 25), karena Upah ditetapkan bulanan dan jumlah hari kerja setiap pegawai berbeda menurut jadwalnya.</p>
+<p><strong>Upah per hari kerja = Upah sebulan ÷ hari kerja terjadwal pegawai dalam periode penggajian</strong></p>
+<p><strong>Tunjangan per hari kerja = (Tunjangan Kehadiran + Tunjangan Transportasi) ÷ hari kerja terjadwal pegawai dalam periode penggajian</strong></p>
+<p><strong>Jumlah tidak dibayar = (Upah per hari kerja + Tunjangan per hari kerja) × jumlah hari tidak hadir tanpa hak atas Upah</strong></p>
+<ol>
+<li>Hari kerja terjadwal adalah hari kerja pada jadwal pegawai di FIAS (Senin–Jumat, Senin–Sabtu, atau roster shift), tidak termasuk istirahat mingguan, hari libur resmi, dan cuti bersama.</li>
+<li>Ketidakhadiran pada hari yang bukan hari kerja terjadwal tidak dihitung.</li>
+<li>Bagi pegawai yang mulai atau berhenti di tengah periode, Upah prorata dihitung lebih dahulu (bagian D). Upah yang tidak dibayar = Upah prorata ÷ hari kerja terjadwal selama masa bekerja dalam periode × hari tidak hadir tanpa hak atas Upah. Pembulatan dilakukan pada hasil akhir.</li>
+<li>Keterlambatan dan pulang cepat dihitung per jam terhadap tunjangan tidak tetap sesuai Bab 9 bagian G. Potongan ini dalam satu hari paling banyak sebesar tunjangan per hari kerja, dan dalam sebulan paling banyak sebesar tunjangan kehadiran dan transportasi bulan itu.</li>
+<li>Pemotongan lain, yaitu denda, ganti rugi, uang muka Upah, sewa, utang atau cicilan, dan kelebihan pembayaran Upah, hanya dilakukan sesuai Pasal 63 PP Nomor 36 Tahun 2021. Denda, ganti rugi, dan uang muka Upah didasarkan pada perjanjian kerja atau Peraturan Yayasan yang berkedudukan sebagai peraturan perusahaan. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span> Sewa serta utang atau cicilan didasarkan pada kesepakatan tertulis. Jumlah seluruh pemotongan tersebut paling banyak 50% dari setiap pembayaran Upah (Pasal 65).</li>
+</ol>
+<p><strong>Simulasi.</strong> Upah sebulan Rp2.000.000; tunjangan kehadiran + transportasi Rp2.000.000; pegawai mangkir 2 hari kerja terjadwal.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Uraian</th>
+<th>Jadwal normal</th>
+<th>Jadwal shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hari kerja terjadwal dalam periode</td>
+<td>22 hari</td>
+<td>26 hari</td>
+</tr>
+<tr>
+<td>Upah per hari kerja</td>
+<td>Rp2.000.000 ÷ 22 = Rp90.909</td>
+<td>Rp2.000.000 ÷ 26 = Rp76.923</td>
+</tr>
+<tr>
+<td>Tunjangan per hari kerja</td>
+<td>Rp2.000.000 ÷ 22 = Rp90.909</td>
+<td>Rp2.000.000 ÷ 26 = Rp76.923</td>
+</tr>
+<tr>
+<td>Jumlah tidak dibayar untuk 2 hari</td>
+<td>Rp363.636</td>
+<td>Rp307.692</td>
+</tr>
+<tr>
+<td>Porsi dari jadwal sebulan</td>
+<td>2 dari 22 hari (9,1%)</td>
+<td>2 dari 26 hari (7,7%)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nilai per hari pegawai shift lebih kecil karena hari kerja terjadwalnya lebih banyak. Kedua pegawai kehilangan bagian yang sebanding dengan hari yang tidak dikerjakan dari jadwalnya masing-masing.</p>
+<h3 id="bab-11-g">G. Ringkasan Dampak Ketidakhadiran (Pegawai Selain Guru)</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Keadaan</th>
+<th>Upah</th>
 <th>Tunjangan kehadiran</th>
 <th>Tunjangan transportasi</th>
 <th>Cuti tahunan</th>
@@ -1738,16 +1942,26 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <td>Hadir tepat waktu</td>
 <td>Dibayar</td>
 <td>Dibayar</td>
+<td>Dibayar</td>
 <td>Tetap</td>
 </tr>
 <tr>
 <td>Hadir terlambat atau pulang cepat</td>
-<td>Dipotong per jam (rumus Bab 9 bagian G)</td>
-<td>Ikut dihitung dalam rumus yang sama</td>
+<td>Dibayar</td>
+<td>Dipotong per jam (Bab 9 bagian G)</td>
+<td>Dipotong per jam (Bab 9 bagian G)</td>
 <td>Tetap</td>
 </tr>
 <tr>
 <td>Dinas luar yang disetujui</td>
+<td>Dibayar</td>
+<td>Dibayar</td>
+<td>Dibayar</td>
+<td>Tetap</td>
+</tr>
+<tr>
+<td>Sakit dengan SKD (sesuai hari istirahat dari dokter)</td>
+<td>Dibayar</td>
 <td>Dibayar</td>
 <td>Dibayar</td>
 <td>Tetap</td>
@@ -1755,82 +1969,77 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <tr>
 <td>Cuti tahunan</td>
 <td>Dibayar</td>
+<td>Dibayar</td>
 <td>Tidak dibayar</td>
 <td>Berkurang</td>
 </tr>
 <tr>
 <td>Cuti normatif dan izin khusus Yayasan</td>
+<td>Dibayar</td>
 <td>Dibayar <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></td>
 <td>Tidak dibayar <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></td>
 <td>Tetap</td>
 </tr>
 <tr>
-<td>Sakit dengan SKD (sesuai hari istirahat dari dokter)</td>
-<td>Dibayar</td>
-<td>Dibayar</td>
-<td>Tetap</td>
-</tr>
-<tr>
-<td>Sakit tanpa SKD / izin pribadi</td>
+<td>Sakit tanpa SKD atau izin pribadi, cuti tahunan masih ada</td>
+<td>Dibayar sebagai cuti tahunan</td>
 <td>Tidak dibayar</td>
 <td>Tidak dibayar</td>
 <td>Berkurang</td>
 </tr>
 <tr>
+<td>Sakit tanpa SKD atau izin pribadi, cuti tahunan habis</td>
+<td>Tidak dibayar (bagian F)</td>
+<td>Tidak dibayar</td>
+<td>Tidak dibayar</td>
+<td>–</td>
+</tr>
+<tr>
 <td>Mangkir</td>
+<td>Tidak dibayar (bagian F)</td>
 <td>Tidak dibayar</td>
 <td>Tidak dibayar</td>
-<td>Berkurang, ditambah sanksi</td>
+<td>Tetap; dikenai sanksi (Bab 13)</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="bab-11-e">E. Potongan bagi Guru</h3>
-<p>Bagi guru (Guru Umum dan Guru Diniyyah), potongan diambil dari porsi tunjangan kehadiran dan transportasi (50% THP Dasar). Rumus terlambat dan pulang cepat sama untuk semua pegawai (Bab 9 bagian G). Bagi guru, potongan harian pada tabel ini menggantikan bagian D.</p>
+<h3 id="bab-11-h">H. Ketentuan Khusus Guru</h3>
+<p>Guru (Guru Umum dan Guru Diniyyah) mengikuti bagian D, E, dan F, dengan ketentuan berikut.</p>
 <div class="tbl"><table>
 <thead>
 <tr>
-<th>Kejadian</th>
-<th>Rumus potongan</th>
-<th>Contoh (THP Dasar Rp4.000.000)</th>
+<th>Keadaan</th>
+<th>Perlakuan</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Terlambat hadir ke FIWA atau masuk kelas</td>
-<td>(Tunjangan Kehadiran + Tunjangan Transportasi) × 1/160 × jam terlambat</td>
-<td>Rp12.500 per jam</td>
-</tr>
-<tr>
-<td>Pulang lebih awal atau meninggalkan kantor</td>
-<td>(Tunjangan Kehadiran + Tunjangan Transportasi) × 1/160 × jumlah jam</td>
-<td>Rp12.500 per jam</td>
+<td>Terlambat atau pulang cepat</td>
+<td>(Tunjangan Kehadiran + Tunjangan Transportasi) × 1/160 × jumlah jam (Bab 9 bagian G)</td>
 </tr>
 <tr>
 <td>Izin syar'i, izin pribadi, atau sakit tanpa SKD</td>
-<td>(Tunjangan Kehadiran + Tunjangan Transportasi) ÷ 24 × jumlah hari</td>
-<td>Rp83.333 per hari</td>
+<td>Upah tetap dibayar dan cuti tahunan tidak berkurang; tunjangan per hari kerja (bagian F) tidak dibayar <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></td>
 </tr>
 <tr>
 <td>Mangkir</td>
-<td>(Tunjangan Kehadiran + Tunjangan Transportasi) ÷ 24 × jumlah hari, ditambah sanksi</td>
-<td>Rp83.333 per hari</td>
+<td>Upah dan tunjangan per hari kerja tidak dibayar (bagian F), ditambah sanksi</td>
 </tr>
 <tr>
 <td>Sakit dengan SKD, cuti tahunan, cuti normatif, dinas yang disetujui</td>
-<td>Tidak dipotong</td>
-<td>Rp0</td>
+<td>Tidak dipotong, termasuk tunjangan transportasi saat cuti tahunan</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>Arti angka dalam rumus:</strong> 1/160 adalah nilai satu jam kerja, karena sebulan dihitung 160 jam (40 jam × 4 minggu). ÷ 24 adalah nilai satu hari kerja, karena sebulan dihitung 24 hari kerja.</p>
-<p><strong>Izin syar'i</strong> adalah izin untuk keperluan yang dibenarkan syariat di luar cuti normatif, misalnya merawat orang tua atau anak yang sakit, atau memenuhi panggilan resmi instansi pemerintah. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span> Bagi guru, izin pribadi dan izin syar'i dipotong sesuai tabel ini dan tidak mengurangi cuti tahunan. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></p>
+<p>Contoh: guru berjadwal Senin–Sabtu dengan 26 hari kerja terjadwal dan tunjangan kehadiran + transportasi Rp2.000.000 mengambil izin pribadi 1 hari. Tunjangan yang tidak dibayar: Rp2.000.000 ÷ 26 = Rp76.923; gaji pokok tetap dibayar penuh.</p>
 <ol>
-<li>Keterlambatan dan pulang lebih awal dihitung proporsional per menit dari jadwal kerja.</li>
-<li>Total potongan sebulan paling banyak sebesar 50% THP Dasar.</li>
+<li>Angka 1/160 pada rumus per jam adalah kebijakan FIWA, dengan asumsi 160 jam kerja sebulan (40 jam × 4 minggu).</li>
+<li><strong>Izin syar'i</strong> adalah izin untuk keperluan yang dibenarkan syariat di luar cuti normatif, misalnya merawat orang tua atau anak yang sakit. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></li>
+<li>Potongan tunjangan dalam sebulan paling banyak sebesar tunjangan kehadiran dan transportasi bulan itu.</li>
 <li>Perhitungan dilakukan HRD melalui FIAS setiap periode penggajian.</li>
 </ol>
-<h3 id="bab-11-f">F. Gaji Selama Sakit Berkepanjangan</h3>
-<p>Pegawai yang sakit lama dan terus-menerus dengan surat dokter tetap menerima upah:</p>
+<h3 id="bab-11-i">I. Gaji Selama Sakit Berkepanjangan</h3>
+<p>Pegawai yang sakit lama dan terus-menerus, dibuktikan dengan SKD, tetap menerima Upah sesuai Pasal 41 ayat (1) PP Nomor 36 Tahun 2021:</p>
 <div class="tbl"><table>
 <thead>
 <tr>
@@ -1853,11 +2062,11 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 </tr>
 <tr>
 <td>Bulan ke-13 dan seterusnya</td>
-<td>25%, sampai ada keputusan PHK</td>
+<td>25%, sebelum pemutusan hubungan kerja dilakukan oleh FIWA</td>
 </tr>
 </tbody>
 </table></div>
-<p>Surat dokter diperbarui paling lambat setiap <strong>30 hari</strong>.</p>
+<p>SKD diperbarui paling lambat setiap <strong>30 hari</strong>. Tunjangan kehadiran dan transportasi dibayar untuk sakit ber-SKD dalam bulan pertama; mulai bulan kedua sakit berkepanjangan, yang dibayar hanya Upah sesuai tabel. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></p>
 
 </section>
 <section class="chapter" id="bab-12" aria-labelledby="bab-12-h"><header class="ch-head"><p class="eyebrow">Bab 12</p><h2 id="bab-12-h">Kesejahteraan</h2></header>
@@ -2170,7 +2379,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <li>Pegawai tetap yang mengundurkan diri sesuai prosedur setelah bekerja lebih dari 10 tahun dengan penilaian baik dapat menerima uang pisah sesuai kemampuan Yayasan. <span class="tbd" title="Menunggu keputusan Pimpinan FIWA">◆</span></li>
 </ol>
 <h3 id="bab-14-c">C. Sakit Berkepanjangan</h3>
-<p>PHK dapat dilakukan setelah sakit berlangsung lebih dari 12 bulan berturut-turut, bagi pegawai yang menurut keterangan dokter tidak sehat jasmani dan/atau rohani untuk melanjutkan pekerjaan, atau cacat akibat kecelakaan kerja sehingga tidak dapat bekerja. Upah selama sakit mengikuti Bab 11 bagian F.</p>
+<p>PHK dapat dilakukan setelah sakit berlangsung lebih dari 12 bulan berturut-turut, bagi pegawai yang menurut keterangan dokter tidak sehat jasmani dan/atau rohani untuk melanjutkan pekerjaan, atau cacat akibat kecelakaan kerja sehingga tidak dapat bekerja. Upah selama sakit mengikuti Bab 11 bagian I.</p>
 <h3 id="bab-14-d">D. Mangkir</h3>
 <p>Pegawai dinyatakan mengundurkan diri bila memenuhi <strong>seluruh</strong> syarat: tidak masuk 5 hari kerja berturut-turut tanpa izin; tidak dapat memberi keterangan sah yang diterima atasan; dan telah dipanggil HRD 2 kali secara patut dan tertulis.</p>
 <h3 id="bab-14-e">E. Kesalahan Berat</h3>
@@ -2356,7 +2565,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
 <tr>
 <td>Pembaruan surat dokter saat sakit panjang</td>
 <td>Setiap 30 hari</td>
-<td><a href="#bab-11-f">11F</a></td>
+<td>11I</td>
 </tr>
 <tr>
 <td>Surat pengunduran diri</td>
@@ -2715,6 +2924,8 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
     '.chapter p { margin: 0 0 2.2mm; orphans: 2; widows: 2; }',
     '.chapter ol, .chapter ul { margin: 0 0 2.6mm; padding-left: 5mm; }',
     '.chapter li { margin: 0 0 1mm; }',
+    '.chapter p, .chapter li { text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; hyphens: auto; }',
+    '.chapter .tbl p, .chapter .tbl li { text-align: left; hyphens: manual; } .chapter .arabic { text-align: center; }',
     '.chapter li::marker { color: #8a651e; font-weight: 700; }',
     '.chapter ol ol { list-style: lower-alpha; margin-top: 1mm; }',
     '.arabic { font-family: Amiri, serif; font-size: 13pt; line-height: 1.8; text-align: center; color: #8a651e; margin: 1mm 0; }',
@@ -2793,7 +3004,7 @@ footer.foot { border-top: 1px solid var(--line); background: var(--surface); }
       '<p class="note">Draf untuk ditelaah. Ketentuan bertanda ◆ masih menunggu keputusan Pimpinan FIWA dan dapat berubah sebelum buku ditetapkan.</p>' +
       '</div></section>';
     var tocHtml = '<nav class="toc front"><h1>Daftar Isi</h1><ol>' + toc + '</ol></nav>';
-    return '<div class="book">' + cover + colophon + tocHtml + body + '</div>';
+    return '<div class="book" lang="id">' + cover + colophon + tocHtml + body + '</div>';
   }
 
   function loadScript(src) {
